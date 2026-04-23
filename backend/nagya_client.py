@@ -118,71 +118,30 @@ def _normalize_user(user: dict) -> dict:
 
 
 # ── Fixture fallbacks ────────────────────────────────────────────────────────
+# Snapshots of the real api.nagya.app payloads, captured verbatim so the demo
+# looks identical when the live API is unreachable.
+
+DATA_DIR = pathlib.Path(__file__).parent.parent / "data"
+PRODUCTS_FIXTURE = DATA_DIR / "products.json"
+USERS_FIXTURE = DATA_DIR / "users.json"
+
+
+def _load_fixture(path: pathlib.Path) -> list[dict]:
+    if not path.exists():
+        return []
+    raw = json.loads(path.read_text())
+    return _unwrap_data(raw) if isinstance(raw, dict) else raw
+
 
 def _fixture_products() -> list[dict]:
-    """Local sample so the team can work without the live API."""
-    return [
-        {
-            "sku": "4088600111001",
-            "name": "Grillwürstchen",
-            "title": "Grillwürstchen",
-            "category": "meat",
-            "expiration_date": "2026-04-25",
-            "original_price": 399,
-            "cost_price": 249,
-            "stock_current": 24,
-            "last_7_day_sold": 18,
-        },
-        {
-            "sku": "4088600111002",
-            "name": "Kartoffelsalat",
-            "title": "Kartoffelsalat",
-            "category": "deli",
-            "expiration_date": "2026-04-25",
-            "original_price": 249,
-            "cost_price": 152,
-            "stock_current": 19,
-            "last_7_day_sold": 10,
-        },
-        {
-            "sku": "4088600111003",
-            "name": "Bier 6-Pack",
-            "title": "Bier 6-Pack",
-            "category": "beverages",
-            "expiration_date": "2026-04-26",
-            "original_price": 499,
-            "cost_price": 319,
-            "stock_current": 20,
-            "last_7_day_sold": 8,
-        },
-        {
-            "sku": "4088600111004",
-            "name": "Grillkohle",
-            "title": "Grillkohle",
-            "category": "non-food",
-            "expiration_date": "2026-04-26",
-            "original_price": 349,
-            "cost_price": 210,
-            "stock_current": 16,
-            "last_7_day_sold": 7,
-        },
-        {
-            "sku": "4088600111005",
-            "name": "Paprika-Dip",
-            "title": "Paprika-Dip",
-            "category": "condiments",
-            "expiration_date": "2026-04-24",
-            "original_price": 129,
-            "cost_price": 84,
-            "stock_current": 18,
-            "last_7_day_sold": 9,
-        },
-    ]
+    """Real Nagya /products snapshot (76 Hungarian SKUs)."""
+    return _load_fixture(PRODUCTS_FIXTURE)
 
 
 def _fixture_all_users() -> list[dict]:
-    path = pathlib.Path(__file__).parent.parent / "data" / "users.json"
-    return [_normalize_user(user) for user in json.loads(path.read_text())]
+    """Real Nagya /users snapshot (5 users). Applies the same normalization
+    path as the live response so callers see one shape either way."""
+    return [_normalize_user(user) for user in _load_fixture(USERS_FIXTURE)]
 
 
 def _fixture_user(user_id: str) -> dict:

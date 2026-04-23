@@ -1,0 +1,1556 @@
+[
+  {
+    "id": 35,
+    "sku": "PEK-003",
+    "title": "Butter Croissant 6 pcs",
+    "category": "Bakery",
+    "description": "Freshly baked butter croissants with a thin, crispy crust and light, flaky interior. Made to a traditional recipe with butter and a pinch of salt, delicious on their own. Great for breakfast with butter and jam, and equally good with cold cuts and cheese. Best consumed fresh within a few hours of baking. Pack: 6 croissants.",
+    "nutrition": "Per 100g: 288 kcal, 9g protein, 4g fat, 51g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Milk"
+    ],
+    "expiration_date": "2026-04-22",
+    "price": {
+      "value": 349,
+      "cost_price": 180,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 82,
+      "last_7_day_sold": 61
+    }
+  },
+  {
+    "id": 33,
+    "sku": "PEK-001",
+    "title": "White Bread 500g",
+    "category": "Bakery",
+    "description": "Traditional sourdough white wheat bread with a crispy, golden-brown crust and soft, springy crumb. Freshly baked daily, preservative-free. Pairs excellently with cold cuts, cheese, jam and butter at breakfast and as a snack. Also available sliced. Store in a paper bag at room temperature to preserve freshness. Pack: 500 g.",
+    "nutrition": "Per 100g: 265 kcal, 8g protein, 1.5g fat, 52g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat"
+    ],
+    "expiration_date": "2026-04-23",
+    "price": {
+      "value": 469,
+      "cost_price": 250,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 95,
+      "last_7_day_sold": 74
+    }
+  },
+  {
+    "id": 34,
+    "sku": "PEK-002",
+    "title": "Graham Bread 400g",
+    "category": "Bakery",
+    "description": "High-fibre bread made from wholegrain graham flour, with a lower glycaemic index than white bread. Its nutty, mildly hazelnut flavour and denser texture provide a feeling of fullness. An excellent choice for health-conscious consumers — ideal served with avocado, hummus and fresh vegetables. Preservative-free, freshly baked daily. Pack: 400 g.",
+    "nutrition": "Per 100g: 248 kcal, 9g protein, 2g fat, 46g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat"
+    ],
+    "expiration_date": "2026-04-23",
+    "price": {
+      "value": 529,
+      "cost_price": 290,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 58,
+      "last_7_day_sold": 45
+    }
+  },
+  {
+    "id": 36,
+    "sku": "PEK-004",
+    "title": "Burger Buns 4 pcs",
+    "category": "Bakery",
+    "description": "Soft, slightly sweet burger buns topped with sesame seeds, providing the perfect base for homemade burgers. The bun is sufficiently firm in the middle not to become soggy from juicy meat and sauces, yet light and soft to bite. Diameter approx. 11 cm, fitting most shaped burger patties. Can be warmed in foil in the oven in 5 minutes. Pack: 4 buns.",
+    "nutrition": "Per 100g: 272 kcal, 8g protein, 3g fat, 50g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Sesame"
+    ],
+    "expiration_date": "2026-04-23",
+    "price": {
+      "value": 399,
+      "cost_price": 210,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 47,
+      "last_7_day_sold": 35
+    }
+  },
+  {
+    "id": 19,
+    "sku": "GF-005",
+    "title": "Sea Bass Fillet 400g",
+    "category": "Grilling food",
+    "description": "Fresh, skin-on sea bass fillet that produces a crispy skin and snow-white, juicy flesh when grilled. Sea bass is a mild, pleasant-tasting fish that pairs equally well with lemon-dill and Mediterranean seasoning. Before grilling, brush with olive oil, season with salt and grill skin-side down for 4-5 minutes. Pack: 400 g (approx. 2 fillets).",
+    "nutrition": "Per 100g: 97 kcal, 19g protein, 2g fat, 0g carbs",
+    "allergens": [
+      "Fish"
+    ],
+    "expiration_date": "2026-04-24",
+    "price": {
+      "value": 3290,
+      "cost_price": 2350,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 17,
+      "last_7_day_sold": 12
+    }
+  },
+  {
+    "id": 16,
+    "sku": "GF-002",
+    "title": "Pork Neck Steak 600g",
+    "category": "Grilling food",
+    "description": "Freshly cut thick (approx. 2 cm) pork neck steaks that stay juicy and flavourful thanks to their high fat content. The slightly marbled meat is perfect for direct grilling — recommended to cook each side for 6-8 minutes over medium-hot embers. Season to taste with salt, pepper and paprika before serving. Pack: 600 g (approx. 3 steaks).",
+    "nutrition": "Per 100g: 245 kcal, 20g protein, 17g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-25",
+    "price": {
+      "value": 1899,
+      "cost_price": 1250,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 28,
+      "last_7_day_sold": 27
+    }
+  },
+  {
+    "id": 21,
+    "sku": "GF-007",
+    "title": "Vegetable Grill Pack 800g",
+    "category": "Grilling food",
+    "description": "Freshly selected, grill-ready mixed vegetables including red and yellow pepper, courgette, red onion and cherry tomatoes. Simply season with olive oil, salt and pepper, then grill in an aluminium tray or directly on the rack for 10-15 minutes. Perfect as a side dish with meat, or served as a standalone vegetarian dish. Pack: 800 g.",
+    "nutrition": "Per 100g: 35 kcal, 1.5g protein, 0.3g fat, 7g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-25",
+    "price": {
+      "value": 1299,
+      "cost_price": 820,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 38,
+      "last_7_day_sold": 16
+    }
+  },
+  {
+    "id": 37,
+    "sku": "PEK-005",
+    "title": "Wholegrain Toast Bread 500g",
+    "category": "Bakery",
+    "description": "Pre-sliced, wholegrain wheat flour toast bread, perfect for breakfast, toasted sandwiches and toast. The fibre-rich, denser crumb provides a longer-lasting feeling of fullness than white toast. Turns golden-brown and crispy in a toaster in 2 minutes. Contains sunflower seeds for a crunchier texture and nutty flavour. Pack: 500 g (approx. 20 slices).",
+    "nutrition": "Per 100g: 242 kcal, 9g protein, 3.5g fat, 43g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Sunflower"
+    ],
+    "expiration_date": "2026-04-25",
+    "price": {
+      "value": 549,
+      "cost_price": 300,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 66,
+      "last_7_day_sold": 42
+    }
+  },
+  {
+    "id": 38,
+    "sku": "ZOL-001",
+    "title": "Cherry Tomatoes 500g",
+    "category": "Vegetables",
+    "description": "Ripe, juicy cherry tomatoes carefully selected for perfect size and ripeness. Their intense sweet-tangy flavour and succulent texture make them excellent in fresh salads, on bruschetta, in sandwiches and as a standalone snack. Rich in vitamin C and lycopene, a valuable nutritional source. Store in the fridge but best enjoyed at room temperature. Pack: 500 g.",
+    "nutrition": "Per 100g: 18 kcal, 0.9g protein, 0.2g fat, 3.5g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-25",
+    "price": {
+      "value": 599,
+      "cost_price": 350,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 73,
+      "last_7_day_sold": 55
+    }
+  },
+  {
+    "id": 40,
+    "sku": "ZOL-003",
+    "title": "Cucumber 1 pc",
+    "category": "Vegetables",
+    "description": "Fresh, crunchy cucumber with smooth skin and a seed-free flesh. Its thin skin allows it to be consumed without peeling. Excellent in fresh salads, tzatziki, sandwiches and as a standalone snack. Its low calorie and high water content make it particularly recommended for diets. Store in the fridge, best consumed within 5-7 days. Pack: 1 pc (approx. 300-400 g).",
+    "nutrition": "Per 100g: 16 kcal, 0.7g protein, 0.1g fat, 3.6g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-25",
+    "price": {
+      "value": 349,
+      "cost_price": 190,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 54,
+      "last_7_day_sold": 38
+    }
+  },
+  {
+    "id": 45,
+    "sku": "ZOL-008",
+    "title": "Broccoli 1 pc",
+    "category": "Vegetables",
+    "description": "Fresh, dark green broccoli head — one of the most nutritious vegetables, rich in vitamin C, vitamin K, folate and fibre. Can be prepared steamed, grilled or roasted in the oven; the fewest nutrients are lost when steamed. Perfect as a side dish, in soups, stir-fried in a wok and in gratin dishes. Stays fresh in the fridge for 3-4 days. Pack: 1 head (approx. 400-500 g).",
+    "nutrition": "Per 100g: 34 kcal, 2.8g protein, 0.4g fat, 6.6g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-25",
+    "price": {
+      "value": 499,
+      "cost_price": 290,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 47,
+      "last_7_day_sold": 29
+    }
+  },
+  {
+    "id": 15,
+    "sku": "GF-001",
+    "title": "Marinated Chicken Wings 1 kg",
+    "category": "Grilling food",
+    "description": "Carefully selected fresh chicken wings marinated for at least 12 hours in a homestyle soy-garlic-paprika marinade. The marinade penetrates deep into the meat, keeping it juicy during cooking and giving it a crispy, caramelised skin on the outside. Ready on the grill in 15-20 minutes. Pack: 1 kg.",
+    "nutrition": "Per 100g: 215 kcal, 18g protein, 15g fat, 2g carbs",
+    "allergens": [
+      "Soy"
+    ],
+    "expiration_date": "2026-04-26",
+    "price": {
+      "value": 2199,
+      "cost_price": 1490,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 43,
+      "last_7_day_sold": 32
+    }
+  },
+  {
+    "id": 23,
+    "sku": "GF-009",
+    "title": "Chicken Breast Fillet 800g",
+    "category": "Grilling food",
+    "description": "Fresh, skin-on chicken breast fillet that stays juicy and flavourful when grilled. Chicken breast is a lean protein source with high protein and low fat content, ideal for diet and sports nutrition. Before grilling, score the thicker part to ensure even cooking — grill each side for 6-8 minutes over medium heat. Best served with freshly grilled vegetables and tzatziki. Pack: 800 g (approx. 2 fillets).",
+    "nutrition": "Per 100g: 165 kcal, 31g protein, 3.6g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-26",
+    "price": {
+      "value": 2490,
+      "cost_price": 1690,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 38,
+      "last_7_day_sold": 21
+    }
+  },
+  {
+    "id": 29,
+    "sku": "TEJ-005",
+    "title": "Plain Kefir 500 ml",
+    "category": "Dairy",
+    "description": "Refreshing fermented milk drink made using traditional methods with kefir grains, with a distinctive tangy, mildly carbonated flavour. Rich in probiotic bacteria and yeasts that benefit the digestive system and immune system. Can be consumed for breakfast on its own, as a smoothie base or mixed with fruit. Pack: 500 ml.",
+    "nutrition": "Per 100ml: 52 kcal, 3.3g protein, 2.5g fat, 4g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-04-26",
+    "price": {
+      "value": 369,
+      "cost_price": 220,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 41,
+      "last_7_day_sold": 28
+    }
+  },
+  {
+    "id": 39,
+    "sku": "ZOL-002",
+    "title": "Red Bell Pepper 3 pcs",
+    "category": "Vegetables",
+    "description": "Meaty, ripe red bell peppers with a sweet flavour and crunchy texture — a particularly versatile ingredient. Raw, they are excellent in sandwiches and salads; roasted and grilled they develop a sweet, caramelised flavour. Their vitamin C content exceeds that of oranges — three peppers cover the daily vitamin C requirement. Store in the fridge and consume within 4-5 days. Pack: 3 peppers.",
+    "nutrition": "Per 100g: 31 kcal, 1g protein, 0.3g fat, 6g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-26",
+    "price": {
+      "value": 549,
+      "cost_price": 320,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 61,
+      "last_7_day_sold": 43
+    }
+  },
+  {
+    "id": 43,
+    "sku": "ZOL-006",
+    "title": "Courgette 1 pc",
+    "category": "Vegetables",
+    "description": "Young, tender green courgette with thin skin and flavourful, seed-free flesh. When grilled it develops a mildly smoky flavour, when pan-fried it becomes creamy. An excellent ingredient for ratatouille, stuffed dishes, soups, pasta sauces and as a pizza topping. Its low calorie and high fibre content make it a great ingredient for diets. Store in the fridge and consume within 5-7 days. Pack: 1 pc (approx. 300-400 g).",
+    "nutrition": "Per 100g: 17 kcal, 1.2g protein, 0.3g fat, 3.1g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-26",
+    "price": {
+      "value": 329,
+      "cost_price": 180,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 33,
+      "last_7_day_sold": 22
+    }
+  },
+  {
+    "id": 63,
+    "sku": "UDI-004",
+    "title": "Fresh Orange Juice 1L",
+    "category": "Soft drinks",
+    "description": "100% freshly squeezed orange juice made from selected oranges with no added preservatives, sugar or water. Rich in vitamin C, folic acid and flavonoids that strengthen the immune system and aid iron absorption. One of the healthiest drink choices for breakfast — one glass (200 ml) covers approx. 120% of the daily vitamin C requirement. Store in the fridge after opening and consume within 3 days. Pack: 1 litre.",
+    "nutrition": "Per 100ml: 45 kcal, 0.7g protein, 0.2g fat, 10g carbs",
+    "allergens": [],
+    "expiration_date": "2026-04-26",
+    "price": {
+      "value": 799,
+      "cost_price": 520,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 47,
+      "last_7_day_sold": 36
+    }
+  },
+  {
+    "id": 25,
+    "sku": "TEJ-001",
+    "title": "Full Milk 2.8% 1 litre",
+    "category": "Dairy",
+    "description": "Fresh, pasteurised cow's milk with 2.8% fat content, ideal as a drink and for coffee, tea, muesli and cooking alike. Carefully quality-controlled milk rich in calcium, vitamin D and protein, contributing to the health of bones and teeth. Store in the fridge after opening and consume within 3 days. Pack: 1 litre.",
+    "nutrition": "Per 100ml: 50 kcal, 3.4g protein, 2.8g fat, 4.7g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-04-27",
+    "price": {
+      "value": 429,
+      "cost_price": 260,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 120,
+      "last_7_day_sold": 85
+    }
+  },
+  {
+    "id": 18,
+    "sku": "GF-004",
+    "title": "Corn on the Cob 4 pcs",
+    "category": "Grilling food",
+    "description": "Freshly picked sweet corn on the cob that can be placed directly on the grill — with or without the husk. When grilled, the kernels caramelise and take on a slightly smoky flavour, which pairs perfectly when served with butter and salt. Preparation: soak in water for 30 minutes, then grill for 15-20 minutes, turning occasionally. Pack: 4 cobs.",
+    "nutrition": "Per 100g: 86 kcal, 3g protein, 1g fat, 19g carbs",
+    "allergens": [
+      "Corn"
+    ],
+    "expiration_date": "2026-04-28",
+    "price": {
+      "value": 999,
+      "cost_price": 620,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 35,
+      "last_7_day_sold": 19
+    }
+  },
+  {
+    "id": 28,
+    "sku": "TEJ-004",
+    "title": "Sour Cream 20% 250g",
+    "category": "Dairy",
+    "description": "Thick, creamy sour cream with 20% fat content — an indispensable ingredient in Hungarian cooking. Perfect for preparing soups, stews, sauces and pastries, and also excellent on fresh salads. Made by natural souring with a pleasantly tangy flavour. For cooking, recommended to add at room temperature to prevent curdling. Pack: 250 g.",
+    "nutrition": "Per 100g: 205 kcal, 2.7g protein, 20g fat, 3.4g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-04-28",
+    "price": {
+      "value": 319,
+      "cost_price": 190,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 78,
+      "last_7_day_sold": 52
+    }
+  },
+  {
+    "id": 32,
+    "sku": "TEJ-008",
+    "title": "Cottage Cheese 250g",
+    "category": "Dairy",
+    "description": "Fresh, granular cow's cottage cheese — a staple ingredient of Hungarian cooking. Excellent sweetened with jam and sour cream for dumplings and layered desserts, or savoury with dill and spring onion spread. Its high protein and low fat content make it a favourite ingredient for athletes and health-conscious consumers. Pack: 250 g.",
+    "nutrition": "Per 100g: 98 kcal, 12g protein, 4.5g fat, 3.2g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-04-28",
+    "price": {
+      "value": 349,
+      "cost_price": 200,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 61,
+      "last_7_day_sold": 38
+    }
+  },
+  {
+    "id": 31,
+    "sku": "TEJ-007",
+    "title": "Mozzarella Ball 125g",
+    "category": "Dairy",
+    "description": "Fresh Italian-style mozzarella cheese aged in brine, with an exceptionally soft, creamy texture and mild milky flavour. Perfect for Caprese salad with tomatoes and fresh basil, but also excellent melted on pizza, in pasta dishes and sandwiches. Consume immediately after slicing as it dries out quickly. Store submerged in brine in the fridge. Pack: 125 g in brine.",
+    "nutrition": "Per 100g: 242 kcal, 18g protein, 19g fat, 0.5g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-04-29",
+    "price": {
+      "value": 699,
+      "cost_price": 450,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 43,
+      "last_7_day_sold": 27
+    }
+  },
+  {
+    "id": 26,
+    "sku": "TEJ-002",
+    "title": "Plain Yoghurt 400g",
+    "category": "Dairy",
+    "description": "Live culture, plain cow's milk yoghurt made using traditional methods with real yoghurt cultures. Its creamy, mildly tangy flavour and thick consistency make it excellent for breakfast with fruit and granola, as a base for sauces and dressings, or for baking. Live lactic acid bacteria support digestion and the immune system. Pack: 400 g.",
+    "nutrition": "Per 100g: 61 kcal, 4g protein, 3.2g fat, 4.5g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-04-30",
+    "price": {
+      "value": 389,
+      "cost_price": 230,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 67,
+      "last_7_day_sold": 47
+    }
+  },
+  {
+    "id": 44,
+    "sku": "ZOL-007",
+    "title": "Carrots 1 kg",
+    "category": "Vegetables",
+    "description": "Fresh, sweet carrots washed and packed to order. Crunchy and sweet when raw, they become soft and even sweeter when cooked. Indispensable in soups, stews, braised vegetable side dishes and fresh fruit-vegetable juice preparation. High beta-carotene content is beneficial for eyesight and the immune system. Store in the fridge or in a cool, dark place. Pack: 1 kg.",
+    "nutrition": "Per 100g: 41 kcal, 0.9g protein, 0.2g fat, 9.6g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-01",
+    "price": {
+      "value": 349,
+      "cost_price": 190,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 92,
+      "last_7_day_sold": 58
+    }
+  },
+  {
+    "id": 22,
+    "sku": "GF-008",
+    "title": "Bacon Slices 200g",
+    "category": "Grilling food",
+    "description": "Thinly sliced, oak-smoked streaky bacon that turns crispy on the grill with an intense, smoky flavour. Excellent in burgers, as a side with grilled dishes or as an accompaniment to breakfast egg dishes. Thin slicing allows quick preparation — just 2-3 minutes on the grill to reach perfect crispiness. Pack: 200 g (approx. 10 slices).",
+    "nutrition": "Per 100g: 417 kcal, 12g protein, 40g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-05",
+    "price": {
+      "value": 1199,
+      "cost_price": 790,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 44,
+      "last_7_day_sold": 38
+    }
+  },
+  {
+    "id": 24,
+    "sku": "GF-010",
+    "title": "Pork Grill Sausages 6 pcs",
+    "category": "Grilling food",
+    "description": "Thick, naturally cased pork grill sausages that develop a crispy exterior and juicy interior when grilled. Seasoned with garlic, white pepper and marjoram based on a traditional recipe. Grilling time: 8-10 minutes over medium embers, turning occasionally. Best served with mustard, fresh bread and sauerkraut. Pack: 6 sausages.",
+    "nutrition": "Per 100g: 285 kcal, 13g protein, 25g fat, 1g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-08",
+    "price": {
+      "value": 1490,
+      "cost_price": 980,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 55,
+      "last_7_day_sold": 34
+    }
+  },
+  {
+    "id": 17,
+    "sku": "GF-003",
+    "title": "Smoked Sausage 500g",
+    "category": "Grilling food",
+    "description": "Traditional cold-smoked pork sausage made to a classic recipe, particularly delicious when grilled. Stuffed in natural casing and seasoned with garlic, caraway and sweet paprika for a full-bodied flavour. Grilling makes the skin crispy while the inside stays juicy. Best served with fresh bread, mustard and pickles. Pack: 500 g.",
+    "nutrition": "Per 100g: 320 kcal, 14g protein, 28g fat, 1g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-10",
+    "price": {
+      "value": 1599,
+      "cost_price": 1050,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 51,
+      "last_7_day_sold": 41
+    }
+  },
+  {
+    "id": 67,
+    "sku": "UVE-001",
+    "title": "Homestyle Lemonade 0.75L Bottle",
+    "category": "Bottled drinks",
+    "description": "Artisan, homestyle lemon-mint lemonade in a returnable glass bottle, without preservatives or artificial flavourings. Made with freshly squeezed lemon juice, sugar and fresh mint sprigs — every sip carries the taste of real ingredients. Served with ice cubes and extra mint, it's the perfect summer drink for garden parties and barbecues. Store in the fridge after opening and consume within 5 days. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 35 kcal, 0g protein, 0g fat, 8.5g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-10",
+    "price": {
+      "value": 990,
+      "cost_price": 620,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 32,
+      "last_7_day_sold": 14
+    }
+  },
+  {
+    "id": 27,
+    "sku": "TEJ-003",
+    "title": "Sliced Trappist Cheese 200g",
+    "category": "Dairy",
+    "description": "Mildly salty, flexible semi-hard cheese made according to the classic Hungarian Trappist recipe. Evenly sliced and ready to eat in sandwiches, toasted sandwiches and salads. When melted it becomes creamy, making it excellent on pizza, gratins and hot sandwiches. Rich in calcium and protein. Pack: 200 g (approx. 10 slices).",
+    "nutrition": "Per 100g: 356 kcal, 25g protein, 28g fat, 0.5g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-05-15",
+    "price": {
+      "value": 849,
+      "cost_price": 530,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 54,
+      "last_7_day_sold": 39
+    }
+  },
+  {
+    "id": 41,
+    "sku": "ZOL-004",
+    "title": "Yellow Onion 1 kg",
+    "category": "Vegetables",
+    "description": "Dry, ripe yellow onion — a staple ingredient in every kitchen. Its intense, characteristic flavour becomes sweet and silky when cooked, and crunchy and pungent when raw. Indispensable in soups, stews, sauces and stir-fries. Stored in a cool, dry, dark place it stays fresh for weeks. Pack: 1 kg in mesh bag.",
+    "nutrition": "Per 100g: 40 kcal, 1.1g protein, 0.1g fat, 9g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-15",
+    "price": {
+      "value": 399,
+      "cost_price": 220,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 88,
+      "last_7_day_sold": 49
+    }
+  },
+  {
+    "id": 30,
+    "sku": "TEJ-006",
+    "title": "Unsalted Butter 250g",
+    "category": "Dairy",
+    "description": "Unsalted premium quality cow's butter produced by churning fresh cream. Rich in natural butyric acid and fat-soluble vitamins (A, D, E, K). Suitable for both baking and cooking, and also an excellent ingredient for spreading on toast and making pastries. The unsalted variety allows precise control of salt content during cooking. Pack: 250 g.",
+    "nutrition": "Per 100g: 717 kcal, 0.8g protein, 81g fat, 0.6g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-05-20",
+    "price": {
+      "value": 949,
+      "cost_price": 620,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 36,
+      "last_7_day_sold": 33
+    }
+  },
+  {
+    "id": 42,
+    "sku": "ZOL-005",
+    "title": "Garlic 3 heads",
+    "category": "Vegetables",
+    "description": "Fresh, aromatic garlic heads — essential in Mediterranean and Hungarian cooking alike. Its strong, distinctive aroma and flavour come from the allicin compound it contains, which also has antibacterial properties. Excellent for flavouring roasts, soups, sauces, marinades and stir-fries. Stored in a cool, airy place it retains freshness for weeks. Pack: 3 heads.",
+    "nutrition": "Per 100g: 149 kcal, 6.4g protein, 0.5g fat, 33g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-20",
+    "price": {
+      "value": 299,
+      "cost_price": 160,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 42,
+      "last_7_day_sold": 31
+    }
+  },
+  {
+    "id": 71,
+    "sku": "UVE-005",
+    "title": "Ginger Lemonade 0.75L Bottle",
+    "category": "Bottled drinks",
+    "description": "Artisan ginger-lemon lemonade in a returnable glass bottle, made from natural ingredients without preservatives. Freshly grated ginger and pressed lemon juice combine to create its distinctive, mildly spicy and refreshing flavour. Extremely popular among health-conscious consumers — ginger is well known for its anti-inflammatory and immune-boosting properties. Served with ice cubes and fresh lemon slices, it is perfect. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 32 kcal, 0g protein, 0g fat, 7.8g carbs",
+    "allergens": [],
+    "expiration_date": "2026-05-20",
+    "price": {
+      "value": 1090,
+      "cost_price": 680,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 27,
+      "last_7_day_sold": 12
+    }
+  },
+  {
+    "id": 20,
+    "sku": "GF-006",
+    "title": "Halloumi Grill Cheese 225g",
+    "category": "Grilling food",
+    "description": "Cypriot semi-hard halloumi cheese that doesn't melt when grilled due to its high melting point, instead developing a golden-brown, crispy crust on the outside while remaining soft and creamy inside. Its mildly salty, creamy flavour pairs excellently with fresh salads, grilled vegetables and pitta bread. Grilling time: 2-3 minutes per side. Pack: 225 g.",
+    "nutrition": "Per 100g: 316 kcal, 21g protein, 25g fat, 1g carbs",
+    "allergens": [
+      "Milk",
+      "Lactose"
+    ],
+    "expiration_date": "2026-06-01",
+    "price": {
+      "value": 2490,
+      "cost_price": 1750,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 29,
+      "last_7_day_sold": 23
+    }
+  },
+  {
+    "id": 49,
+    "sku": "EDE-004",
+    "title": "Caramel Wafer Bar 3 pcs",
+    "category": "Sweets",
+    "description": "Crispy wafer layers filled with thick, buttery caramel cream, coated in milk chocolate. Every bite delivers a contrast between crunchy wafer and creamy filling. An excellent treat with coffee, tea or hot chocolate as an afternoon snack. Individually wrapped bars, easy to portion and always fresh. Pack: 3 bars.",
+    "nutrition": "Per 100g: 490 kcal, 5g protein, 25g fat, 63g carbs",
+    "allergens": [
+      "Gluten",
+      "Milk",
+      "Soy"
+    ],
+    "expiration_date": "2026-08-01",
+    "price": {
+      "value": 399,
+      "cost_price": 220,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 61,
+      "last_7_day_sold": 26
+    }
+  },
+  {
+    "id": 52,
+    "sku": "EDE-007",
+    "title": "Paprika Crisps 150g",
+    "category": "Sweets",
+    "description": "Crunchy, thinly sliced potato crisps with a bold paprika seasoning. Made from natural potatoes, they snap easily and leave a pleasant spicy aftertaste. The perfect snack for movie nights, parties and travel. Available in a resealable bag so they always stay fresh. Pack: 150 g.",
+    "nutrition": "Per 100g: 520 kcal, 6g protein, 30g fat, 56g carbs",
+    "allergens": [
+      "Gluten",
+      "Milk"
+    ],
+    "expiration_date": "2026-08-01",
+    "price": {
+      "value": 549,
+      "cost_price": 310,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 84,
+      "last_7_day_sold": 47
+    }
+  },
+  {
+    "id": 66,
+    "sku": "UDI-007",
+    "title": "Multivitamin Fruit Juice 1L",
+    "category": "Soft drinks",
+    "description": "Vitamin-enriched mixed fruit juice — a blend of apple, orange, pineapple and mango — containing vitamins C, B6 and E. Contains no added sugar; the natural fruit sugars provide the sweet flavour. One glass (200 ml) covers 100% of the daily vitamin C requirement. Recommended for breakfast, before sport and as a children's snack. Pack: 1 litre.",
+    "nutrition": "Per 100ml: 48 kcal, 0.4g protein, 0.1g fat, 11.5g carbs",
+    "allergens": [],
+    "expiration_date": "2026-08-01",
+    "price": {
+      "value": 649,
+      "cost_price": 390,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 53,
+      "last_7_day_sold": 28
+    }
+  },
+  {
+    "id": 70,
+    "sku": "UVE-004",
+    "title": "Craft IPA Beer 0.33L Bottle",
+    "category": "Bottled drinks",
+    "description": "Craft India Pale Ale (IPA) beer in a returnable glass bottle, with 6.5% alcohol content. Heavily hopped with an intense tropical and citrus aroma — grapefruit, mango and pine notes. The bitterness is bold but balanced, the aftertaste long and complex. Ideal for beer connoisseurs and craft beer enthusiasts. Best served chilled at 6-8°C. Pack: 0.33 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 52 kcal, 0.5g protein, 0g fat, 4.2g carbs",
+    "allergens": [
+      "Gluten",
+      "Barley"
+    ],
+    "expiration_date": "2026-08-01",
+    "price": {
+      "value": 890,
+      "cost_price": 560,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 45,
+      "last_7_day_sold": 19
+    }
+  },
+  {
+    "id": 50,
+    "sku": "EDE-005",
+    "title": "Butter Biscuits 200g",
+    "category": "Sweets",
+    "description": "Crumbly, buttery biscuits made to a traditional recipe with real butter. Their mildly sweet, creamy flavour and melt-in-the-mouth, crumbly texture set them apart from ordinary biscuits. Great with tea, coffee and cocoa, but also heavenly spread with cream cheese or jam. Packaged in a resealable box so they stay fresh and crispy for longer. Pack: 200 g.",
+    "nutrition": "Per 100g: 480 kcal, 6g protein, 22g fat, 65g carbs",
+    "allergens": [
+      "Gluten",
+      "Milk",
+      "Eggs"
+    ],
+    "expiration_date": "2026-09-01",
+    "price": {
+      "value": 449,
+      "cost_price": 250,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 44,
+      "last_7_day_sold": 21
+    }
+  },
+  {
+    "id": 53,
+    "sku": "SZE-001",
+    "title": "Lager Beer 0.5L Can",
+    "category": "Alcoholic beverages",
+    "description": "Refreshing, domestically brewed light lager beer in a can, with 4.5% alcohol content. A mildly hoppy, light, fizzy beer ideal on warm days, alongside a barbecue or with friends. The can format chills quickly and is easy to transport. Pleasantly bitter aftertaste, a well-balanced beer enjoyable both by regular beer drinkers and occasional consumers. Pack: 0.5 litre.",
+    "nutrition": "Per 100ml: 43 kcal, 0.5g protein, 0g fat, 3.6g carbs",
+    "allergens": [
+      "Gluten",
+      "Barley"
+    ],
+    "expiration_date": "2026-09-01",
+    "price": {
+      "value": 349,
+      "cost_price": 190,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 142,
+      "last_7_day_sold": 68
+    }
+  },
+  {
+    "id": 54,
+    "sku": "SZE-002",
+    "title": "Lager Beer 0.5L Bottle",
+    "category": "Alcoholic beverages",
+    "description": "The same excellent quality, domestically brewed light lager beer in a returnable glass bottle, with 4.5% alcohol content. The glass preserves the freshness and flavour of the beer while being returnable, making it a more environmentally friendly choice. The classic beer-flavoured, chilled drink is recommended for barbecue parties, garden gatherings and everyday relaxation. Pack: 0.5 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 43 kcal, 0.5g protein, 0g fat, 3.6g carbs",
+    "allergens": [
+      "Gluten",
+      "Barley"
+    ],
+    "expiration_date": "2026-09-01",
+    "price": {
+      "value": 369,
+      "cost_price": 200,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 98,
+      "last_7_day_sold": 54
+    }
+  },
+  {
+    "id": 61,
+    "sku": "UDI-002",
+    "title": "Lemon Lemonade 1L Bottle",
+    "category": "Soft drinks",
+    "description": "Freshly squeezed lemon-based lemonade made to a traditional recipe in a returnable glass bottle. Its mildly sweet, refreshingly tangy flavour reflects the aroma of real lemon — contains no artificial flavourings or preservatives. Excellent chilled with ice and mint, but also great as a cocktail base. Store in the fridge after opening and consume within 5 days. Pack: 1 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 38 kcal, 0g protein, 0g fat, 9.5g carbs",
+    "allergens": [],
+    "expiration_date": "2026-09-01",
+    "price": {
+      "value": 549,
+      "cost_price": 310,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 58,
+      "last_7_day_sold": 41
+    }
+  },
+  {
+    "id": 64,
+    "sku": "UDI-005",
+    "title": "Peach Iced Tea 1.5L PET",
+    "category": "Soft drinks",
+    "description": "Refreshing peach-flavoured iced tea in a 1.5 litre returnable PET bottle. Made on a black tea base with real peach pulp and natural flavouring — its distinctive, fruity flavour instantly refreshes in the summer heat. Contains no artificial colours. Particularly refreshing served with ice cubes and fresh peach slices. Pack: 1.5 litres.",
+    "nutrition": "Per 100ml: 22 kcal, 0g protein, 0g fat, 5.3g carbs",
+    "allergens": [],
+    "expiration_date": "2026-09-01",
+    "price": {
+      "value": 399,
+      "cost_price": 210,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 92,
+      "last_7_day_sold": 44
+    }
+  },
+  {
+    "id": 48,
+    "sku": "EDE-003",
+    "title": "Mixed Gummy Bears 200g",
+    "category": "Sweets",
+    "description": "Mixed fruit-flavoured gummy sweets in various shapes and colours, a favourite with children and adults alike. Among the gummies you'll find strawberry, lemon, orange, raspberry and blueberry flavoured pieces. Their soft, chewy texture and vibrant fruity flavour provide a great experience. Pack: 200 g in resealable bag, always stays fresh.",
+    "nutrition": "Per 100g: 320 kcal, 5g protein, 0g fat, 76g carbs",
+    "allergens": [
+      "Gelatine"
+    ],
+    "expiration_date": "2026-10-01",
+    "price": {
+      "value": 499,
+      "cost_price": 280,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 38,
+      "last_7_day_sold": 18
+    }
+  },
+  {
+    "id": 60,
+    "sku": "UDI-001",
+    "title": "Cola 1.5L PET",
+    "category": "Soft drinks",
+    "description": "Classic, heavily carbonated cola-flavoured soft drink in a 1.5 litre returnable PET bottle. Its distinctive caramel-spice flavour and bubbly character make this soft drink a perennial favourite. Best served chilled with ice cubes, but also a perfect accompaniment to pizza, burgers and other fast food. Store in the fridge after opening and consume within 3 days. Pack: 1.5 litres.",
+    "nutrition": "Per 100ml: 42 kcal, 0g protein, 0g fat, 10.6g carbs",
+    "allergens": [],
+    "expiration_date": "2026-10-01",
+    "price": {
+      "value": 499,
+      "cost_price": 270,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 115,
+      "last_7_day_sold": 73
+    }
+  },
+  {
+    "id": 47,
+    "sku": "EDE-002",
+    "title": "Milk Chocolate with Hazelnuts 100g",
+    "category": "Sweets",
+    "description": "Creamy, sweet milk chocolate with whole hazelnut pieces, made from a rich combination of cocoa and milk powder. The crunchy hazelnut pieces provide a pleasant textural contrast to the creamy chocolate. Excellent as a snack, for elevenses, but also great chopped for baking. Store in a cool, dry place below 18°C. Pack: 100 g.",
+    "nutrition": "Per 100g: 560 kcal, 7g protein, 34g fat, 57g carbs",
+    "allergens": [
+      "Milk",
+      "Hazelnuts",
+      "Soy"
+    ],
+    "expiration_date": "2026-11-01",
+    "price": {
+      "value": 749,
+      "cost_price": 460,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 52,
+      "last_7_day_sold": 37
+    }
+  },
+  {
+    "id": 46,
+    "sku": "EDE-001",
+    "title": "Dark Chocolate 70% 100g",
+    "category": "Sweets",
+    "description": "Premium Belgian dark chocolate with 70% cocoa content — an intense, mildly bitter flavour and silky melt make it a true delicacy for chocolate lovers. The high cocoa content is rich in antioxidants, and the flavonoids have a beneficial effect on cardiovascular health. Perfect on its own, paired with wine, for baking and dessert making. Store below 18°C, away from direct sunlight. Pack: 100 g.",
+    "nutrition": "Per 100g: 545 kcal, 5g protein, 43g fat, 46g carbs",
+    "allergens": [
+      "Milk",
+      "Soy",
+      "Nuts"
+    ],
+    "expiration_date": "2026-12-01",
+    "price": {
+      "value": 849,
+      "cost_price": 520,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 45,
+      "last_7_day_sold": 29
+    }
+  },
+  {
+    "id": 51,
+    "sku": "EDE-006",
+    "title": "Chocolate Hazelnut Spread 400g",
+    "category": "Sweets",
+    "description": "Creamy, sweet hazelnut spread with cocoa, perfect spread on toast, on pancakes, dipped with fruit and for baking. The spreadable cream has a thick consistency with a rich hazelnut flavour that is immediately recognisable. Can be stored in a jar at room temperature. Contains: 13% hazelnuts, cocoa, milk, sugar. Pack: 400 g.",
+    "nutrition": "Per 100g: 539 kcal, 6.3g protein, 30.9g fat, 57.5g carbs",
+    "allergens": [
+      "Milk",
+      "Hazelnuts",
+      "Soy",
+      "Gluten"
+    ],
+    "expiration_date": "2026-12-01",
+    "price": {
+      "value": 1099,
+      "cost_price": 680,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 58,
+      "last_7_day_sold": 33
+    }
+  },
+  {
+    "id": 65,
+    "sku": "UDI-006",
+    "title": "Energy Drink 0.25L Can",
+    "category": "Soft drinks",
+    "description": "Carbonated energy drink containing caffeine, taurine and B vitamins in a formula that helps you concentrate and feel more energetic during temporary fatigue. Caffeine content: 80 mg per can. Its invigorating, citrus-sweet flavour is refreshing. Not recommended for children, pregnant women or those sensitive to caffeine. Best served chilled. Pack: 0.25 litre can.",
+    "nutrition": "Per 100ml: 45 kcal, 0g protein, 0g fat, 11g carbs",
+    "allergens": [],
+    "expiration_date": "2026-12-01",
+    "price": {
+      "value": 399,
+      "cost_price": 210,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 108,
+      "last_7_day_sold": 62
+    }
+  },
+  {
+    "id": 1,
+    "sku": "GNF-001",
+    "title": "Premium Birch Charcoal 3 kg",
+    "category": "Grilling non-food",
+    "description": "Premium quality birch charcoal that provides even, long-lasting heat for the perfect grilling experience. Made from natural materials, it guarantees smokeless burning so the taste of food is not spoiled by unpleasant aftertastes. Lights quickly and glows for a long time, making it an ideal choice for both short and longer grilling sessions. Pack size: 3 kg paper bag.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2026-12-31",
+    "price": {
+      "value": 2199,
+      "cost_price": 1350,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 48,
+      "last_7_day_sold": 14
+    }
+  },
+  {
+    "id": 62,
+    "sku": "UDI-003",
+    "title": "Sparkling Mineral Water 1.5L PET",
+    "category": "Soft drinks",
+    "description": "Natural sparkling mineral water in a 1.5 litre returnable PET bottle. Its mineral content (calcium, magnesium, sodium) helps maintain the body's electrolyte balance. The pleasant, medium-intensity carbonation provides a refreshing sensation. Excellent alongside meals, for rehydration after sport and for making cocktails. Best served chilled. Pack: 1.5 litres.",
+    "nutrition": "Per 100ml: 0 kcal, 0g protein, 0g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2027-01-01",
+    "price": {
+      "value": 299,
+      "cost_price": 150,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 188,
+      "last_7_day_sold": 89
+    }
+  },
+  {
+    "id": 68,
+    "sku": "UVE-002",
+    "title": "Apple Cider 0.75L Bottle",
+    "category": "Bottled drinks",
+    "description": "Lightly sparkling, natural apple cider in a returnable glass bottle, with 4% alcohol content. Fermented from selected Hungarian apple varieties and naturally carbonated — its fresh, fruity flavour is reminiscent of freshly pressed apple juice but with light alcoholic notes. Excellent as an aperitif, for picnics and with light meals. Best served chilled at 6-8°C. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 50 kcal, 0.2g protein, 0g fat, 5g carbs",
+    "allergens": [
+      "Sulphites"
+    ],
+    "expiration_date": "2027-01-01",
+    "price": {
+      "value": 1690,
+      "cost_price": 1050,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 24,
+      "last_7_day_sold": 11
+    }
+  },
+  {
+    "id": 74,
+    "sku": "TES-003",
+    "title": "Egg Noodles 250g",
+    "category": "Pasta & grains",
+    "description": "Traditional, homestyle egg noodles made with fresh eggs and wheat flour. The rich egg yolk gives the pasta a distinctive golden-yellow colour and creamy flavour. Excellent sweetened with sour cream and jam for dumplings and layered desserts, but also perfect savoury with cottage cheese and dill filling. Short cooking time: 4-5 minutes in plenty of salted water. Pack: 250 g.",
+    "nutrition": "Per 100g: 368 kcal, 13g protein, 2.5g fat, 71g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Eggs"
+    ],
+    "expiration_date": "2027-03-01",
+    "price": {
+      "value": 399,
+      "cost_price": 220,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 28,
+      "last_7_day_sold": 15
+    }
+  },
+  {
+    "id": 57,
+    "sku": "SZE-005",
+    "title": "Semi-Dry Rosé Wine 0.75L",
+    "category": "Alcoholic beverages",
+    "description": "Light, refreshing rosé wine with 12% alcohol content, perfect as a summer drink for both dry and semi-dry wine lovers. Its salmon-pink colour, strawberry-citrus aroma and pleasantly acidic aftertaste make it light and refreshing. Pairs excellently with light salads, cheeses, grilled chicken and seafood. Serving temperature: 8-10°C. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 80 kcal, 0.1g protein, 0g fat, 4g carbs",
+    "allergens": [
+      "Sulphites"
+    ],
+    "expiration_date": "2027-06-01",
+    "price": {
+      "value": 1990,
+      "cost_price": 1250,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 27,
+      "last_7_day_sold": 17
+    }
+  },
+  {
+    "id": 69,
+    "sku": "UVE-003",
+    "title": "Premium Still Water 0.75L Bottle",
+    "category": "Bottled drinks",
+    "description": "Premium natural still mineral water in a returnable glass bottle. The water undergoes natural filtration through limestone layers and is rich in mineral content (calcium, magnesium, potassium). The glass packaging guarantees that the drink takes on no foreign tastes or odours. Excellent as restaurant water, for special occasions and everyday hydration. Serving temperature: 8-12°C. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 0 kcal, 0g protein, 0g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2027-06-01",
+    "price": {
+      "value": 699,
+      "cost_price": 420,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 61,
+      "last_7_day_sold": 28
+    }
+  },
+  {
+    "id": 72,
+    "sku": "TES-001",
+    "title": "Spaghetti 500g",
+    "category": "Pasta & grains",
+    "description": "Premium quality spaghetti made from 100% durum wheat semolina, bronze-die extruded. Bronze extrusion gives the pasta a rough surface that sauce clings to better — ensuring every bite is full of flavour. Cook for 8-10 minutes in plenty of salted water for al dente texture. Excellent with Bolognese, carbonara, aglio e olio and other Italian sauces. Preservative-free, egg-free recipe. Pack: 500 g.",
+    "nutrition": "Per 100g: 353 kcal, 12g protein, 1.5g fat, 72g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Eggs"
+    ],
+    "expiration_date": "2027-06-01",
+    "price": {
+      "value": 459,
+      "cost_price": 260,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 54,
+      "last_7_day_sold": 31
+    }
+  },
+  {
+    "id": 73,
+    "sku": "TES-002",
+    "title": "Penne Rigate 500g",
+    "category": "Pasta & grains",
+    "description": "Ridged, tube-shaped penne pasta made from durum wheat semolina, bronze-die extruded. The ridged surface and hollow tube interior maximally absorb the sauce, making every bite flavourful. Particularly suitable for thicker sauces such as arrabbiata, pesto, vegetable or meat ragù. Cook for 10-12 minutes for al dente texture. Pack: 500 g.",
+    "nutrition": "Per 100g: 350 kcal, 13g protein, 1.8g fat, 70g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Eggs"
+    ],
+    "expiration_date": "2027-06-01",
+    "price": {
+      "value": 439,
+      "cost_price": 250,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 41,
+      "last_7_day_sold": 24
+    }
+  },
+  {
+    "id": 4,
+    "sku": "GNF-004",
+    "title": "Grill Lighter Fluid 0.5L",
+    "category": "Grilling non-food",
+    "description": "Fast and reliable grill lighter fluid that ignites charcoal or briquettes within seconds. The special formula is effective in small quantities and leaves no unpleasant odour on food. Important: apply only to cold charcoal, never pour onto an open flame! Contents: 0.5 litres.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2027-06-30",
+    "price": {
+      "value": 1099,
+      "cost_price": 650,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 55,
+      "last_7_day_sold": 11
+    }
+  },
+  {
+    "id": 75,
+    "sku": "TES-004",
+    "title": "Tricolore Fusilli 500g",
+    "category": "Pasta & grains",
+    "description": "Three-colour twisted fusilli pasta — plain, spinach (green) and tomato (red) — that looks impressive on the plate while offering a varied flavour profile. Made from durum wheat semolina and natural vegetable extracts, with no artificial colouring. Excellent with pesto, creamy sauces and cold pasta salads. Cook for 9-11 minutes for al dente texture. Pack: 500 g.",
+    "nutrition": "Per 100g: 351 kcal, 12g protein, 1.6g fat, 71g carbs",
+    "allergens": [
+      "Gluten",
+      "Wheat",
+      "Eggs"
+    ],
+    "expiration_date": "2027-08-01",
+    "price": {
+      "value": 479,
+      "cost_price": 270,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 36,
+      "last_7_day_sold": 19
+    }
+  },
+  {
+    "id": 58,
+    "sku": "SZE-006",
+    "title": "Dry White Wine 0.75L",
+    "category": "Alcoholic beverages",
+    "description": "Fresh, dry Hungarian white wine made from Olaszrizling and Chardonnay grape varieties, aged in stainless steel tanks. Its pale yellow colour, citrus-floral aroma and lively acidity make it light and refreshing. Pairs excellently with seafood, grilled fish, light pasta dishes and fresh cheeses. Serving temperature: 8-10°C. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 82 kcal, 0.1g protein, 0g fat, 2.4g carbs",
+    "allergens": [
+      "Sulphites"
+    ],
+    "expiration_date": "2027-09-01",
+    "price": {
+      "value": 1890,
+      "cost_price": 1190,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 29,
+      "last_7_day_sold": 14
+    }
+  },
+  {
+    "id": 76,
+    "sku": "TES-005",
+    "title": "Long Grain Rice 1 kg",
+    "category": "Pasta & grains",
+    "description": "Premium long grain rice that remains separate and fluffy after cooking without clumping. Ideal as a side dish with meat and vegetable dishes, but also excellent for risotto, pilaf and Asian-inspired dishes. Its high carbohydrate content provides quick energy; its naturally gluten-free nature means it is also suitable for those with coeliac disease. Cooking time: 18-20 minutes covered with twice the amount of water. Pack: 1 kg.",
+    "nutrition": "Per 100g: 360 kcal, 7g protein, 0.7g fat, 79g carbs",
+    "allergens": [],
+    "expiration_date": "2027-12-01",
+    "price": {
+      "value": 599,
+      "cost_price": 350,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 71,
+      "last_7_day_sold": 35
+    }
+  },
+  {
+    "id": 13,
+    "sku": "ENF-006",
+    "title": "Lemon Washing-Up Liquid 500 ml",
+    "category": "Other non-food",
+    "description": "Concentrated, lemon-scented washing-up liquid that effectively dissolves grease and food residues even in cold water. The gentle formula protects skin during extended washing-up sessions and does not dry out hands. Contains ecologically biodegradable ingredients. A few drops are enough for a full sink of dishes. Pack: 500 ml.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2028-01-01",
+    "price": {
+      "value": 699,
+      "cost_price": 380,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 94,
+      "last_7_day_sold": 31
+    }
+  },
+  {
+    "id": 55,
+    "sku": "SZE-003",
+    "title": "Dry Red Wine 0.75L",
+    "category": "Alcoholic beverages",
+    "description": "Full-bodied, dry Hungarian red wine made from selected domestic grape varieties with oak barrel ageing. Its ruby-red colour, cherry-spicy aroma and fine tannin content complement each other harmoniously. Pairs excellently with red meats, game, aged cheeses and dark chocolate. Serving temperature: 16-18°C. Pack: 0.75 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 85 kcal, 0.1g protein, 0g fat, 2.6g carbs",
+    "allergens": [
+      "Sulphites"
+    ],
+    "expiration_date": "2028-01-01",
+    "price": {
+      "value": 2290,
+      "cost_price": 1450,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 34,
+      "last_7_day_sold": 22
+    }
+  },
+  {
+    "id": 2,
+    "sku": "GNF-002",
+    "title": "Stainless Steel Grill Rack 40x30 cm",
+    "category": "Grilling non-food",
+    "description": "Heavy-duty stainless steel grill rack suitable for grilling meat, vegetables and fish alike. The dense grid pattern prevents smaller pieces from falling through while delivering perfect grill marks. Easy to clean and dishwasher safe. Dimensions: 40x30 cm, fits most charcoal and gas grills.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 3490,
+      "cost_price": 2100,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 22,
+      "last_7_day_sold": 7
+    }
+  },
+  {
+    "id": 3,
+    "sku": "GNF-003",
+    "title": "Heat-Resistant Silicone Grill Gloves",
+    "category": "Grilling non-food",
+    "description": "Professional heat-resistant silicone grill gloves that protect your hands up to 250°C when touching open flames and hot surfaces. The non-slip silicone coating provides a secure grip when moving hot pots, trays and grill racks. Machine washable for easy maintenance. Universal size fits both men and women.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 2990,
+      "cost_price": 1800,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 31,
+      "last_7_day_sold": 9
+    }
+  },
+  {
+    "id": 5,
+    "sku": "GNF-005",
+    "title": "Aluminium Grill Tray 5 pcs",
+    "category": "Grilling non-food",
+    "description": "Thick-walled, single-use aluminium grill trays perfect for grilling vegetables, fish, marinated meats and side dishes on the barbecue. The high rim prevents juice from spilling and the aluminium material conducts heat evenly. Can be reused after washing. Pack contents: 5 trays.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 799,
+      "cost_price": 450,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 74,
+      "last_7_day_sold": 18
+    }
+  },
+  {
+    "id": 6,
+    "sku": "GNF-006",
+    "title": "Digital Meat Thermometer",
+    "category": "Grilling non-food",
+    "description": "Precise instant-read digital meat thermometer that measures the internal temperature of meat accurately within seconds. The 180° rotating display allows easy reading from any angle. Temperature range: -50°C to +300°C, accuracy ±1°C. Avoid under- and overcooking — perfectly cooked meat every time. Battery included. Pack: 1 unit.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 4990,
+      "cost_price": 3100,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 15,
+      "last_7_day_sold": 6
+    }
+  },
+  {
+    "id": 7,
+    "sku": "GNF-007",
+    "title": "Silicone Grill Brush 30 cm",
+    "category": "Grilling non-food",
+    "description": "Long-handled, food-grade silicone grill brush, ideal for applying marinades, oil and sauces during grilling. Heat-resistant silicone bristles won't melt and are easy to clean — dishwasher safe. The long handle protects your hand from heat. Uniform silicone construction retains no odours or flavours. Pack: 1 unit, 30 cm.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 1790,
+      "cost_price": 1050,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 28,
+      "last_7_day_sold": 9
+    }
+  },
+  {
+    "id": 8,
+    "sku": "ENF-001",
+    "title": "Cotton T-Shirt White L",
+    "category": "Other non-food",
+    "description": "Classic-cut 100% cotton men's t-shirt in white, size L. The breathable cotton fabric provides all-day comfort, ideal for everyday and leisure wear alike. Machine washable at 40°C, does not shrink and holds its shape. Reinforced stitching at the neck ensures durability.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 3990,
+      "cost_price": 2200,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 18,
+      "last_7_day_sold": 5
+    }
+  },
+  {
+    "id": 9,
+    "sku": "ENF-002",
+    "title": "Leather Work Gloves M",
+    "category": "Other non-food",
+    "description": "Premium genuine leather work gloves in size M, providing effective protection against abrasion, puncture and mechanical impact. Ventilation holes on the back of the hand reduce sweating during extended work. Features a Velcro wrist closure for a secure fit. Suitable for DIY, gardening and general manual work.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 2490,
+      "cost_price": 1450,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 24,
+      "last_7_day_sold": 4
+    }
+  },
+  {
+    "id": 10,
+    "sku": "ENF-003",
+    "title": "Screwdriver Set 6 pcs",
+    "category": "Other non-food",
+    "description": "Versatile 6-piece screwdriver set including 3 Phillips (cross) and 3 flat-head drivers in various sizes. The chrome-vanadium steel tips are resistant to wear and twisting. The rubberised, ergonomic handle allows comfortable grip and high torque. Perfect for home DIY, furniture assembly and general maintenance.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 4290,
+      "cost_price": 2600,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 12,
+      "last_7_day_sold": 3
+    }
+  },
+  {
+    "id": 11,
+    "sku": "ENF-004",
+    "title": "Clear Adhesive Tape 5 rolls",
+    "category": "Other non-food",
+    "description": "Strong, transparent adhesive tape set — a must-have in every household. The tape provides excellent adhesion on paper, cardboard, plastic and other smooth surfaces. Easy to tear by hand or cut with scissors, leaves no residue. Suitable for packaging, repairs and office tasks. Pack contents: 5 rolls.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 890,
+      "cost_price": 490,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 62,
+      "last_7_day_sold": 8
+    }
+  },
+  {
+    "id": 12,
+    "sku": "ENF-005",
+    "title": "Plastic Tie Bags 50 pcs",
+    "category": "Other non-food",
+    "description": "Strong, reusable plastic tie bag set, ideal for tying garden produce, plants and other items. The flexible material does not cut into plant stems and is easy to remove. Weather-resistant construction, resistant to sunlight and rain. Pack contents: 50 bags in various sizes.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 649,
+      "cost_price": 360,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 88,
+      "last_7_day_sold": 6
+    }
+  },
+  {
+    "id": 14,
+    "sku": "ENF-007",
+    "title": "Bin Bags 10 pcs 60L",
+    "category": "Other non-food",
+    "description": "Strong, tear-resistant black bin bags in 60-litre size, fitting most standard-sized waste bins. Thick-walled material prevents leaking and resists sharp objects. The practical handle design makes tying and removing the bag from the bin easy. Pack contents: 10 bags.",
+    "nutrition": null,
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 899,
+      "cost_price": 520,
+      "bottle_deposit": 0
+    },
+    "stock": {
+      "current": 77,
+      "last_7_day_sold": 22
+    }
+  },
+  {
+    "id": 56,
+    "sku": "SZE-004",
+    "title": "Apricot Pálinka 0.5L",
+    "category": "Alcoholic beverages",
+    "description": "Traditional double-distilled apricot pálinka at 50% alcohol content, made from ripe Hungarian apricots. Its intense apricot aroma and clean, fruity flavour reflect the excellent quality of the base ingredient. Can be served as an aperitif, alongside dessert, or in a glass at room temperature without ice. The traditional method and Hungarian ingredients guarantee authentic pálinka quality. Pack: 0.5 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 230 kcal, 0g protein, 0g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 5990,
+      "cost_price": 3900,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 18,
+      "last_7_day_sold": 9
+    }
+  },
+  {
+    "id": 59,
+    "sku": "SZE-007",
+    "title": "Premium Gin 0.5L",
+    "category": "Alcoholic beverages",
+    "description": "Premium quality London Dry style gin distilled with 9 botanicals — juniper, coriander seed, angelica root, lemon peel and other spices. Alcohol content: 40%. Its refreshing, floral-citrus aroma and dry, spicy character are best enjoyed with tonic water, ice cubes and a fresh lime slice. Also excellent as a cocktail base. Pack: 0.5 litre, returnable bottle.",
+    "nutrition": "Per 100ml: 220 kcal, 0g protein, 0g fat, 0g carbs",
+    "allergens": [],
+    "expiration_date": "2030-01-01",
+    "price": {
+      "value": 7490,
+      "cost_price": 4900,
+      "bottle_deposit": 50
+    },
+    "stock": {
+      "current": 14,
+      "last_7_day_sold": 7
+    }
+  }
+]

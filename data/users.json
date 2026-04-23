@@ -1,50 +1,37 @@
 [
   {
-    "user_id": "U001",
-    "name": "Anna Schmidt",
-    "city": "Munich",
-    "country": "DE",
-    "language": "de",
-    "purchase_history": [
-      {"sku": "4088600111001", "name": "Grillwürstchen", "count": 3},
-      {"sku": "4088600111002", "name": "Kartoffelsalat", "count": 2},
-      {"sku": "4088600111003", "name": "Bier 6-Pack", "count": 4}
-    ]
+    "id": 1,
+    "name": "Tejes Tibor",
+    "email": "aiishackathon+1@gmail.com",
+    "favorite_category": "Dairy",
+    "least_purchased_category": "Alcoholic beverages"
   },
   {
-    "user_id": "U002",
-    "name": "Péter Varga",
-    "city": "Budapest",
-    "country": "HU",
-    "language": "hu",
-    "purchase_history": [
-      {"sku": "4088600222001", "name": "Tejföl", "count": 5},
-      {"sku": "4088600222002", "name": "Kenyér", "count": 8},
-      {"sku": "4088600222003", "name": "Paradicsom", "count": 3}
-    ]
+    "id": 2,
+    "name": "Grillmester Gábor",
+    "email": "aiishackathon+2@gmail.com",
+    "favorite_category": "Grilling food",
+    "least_purchased_category": "Bakery"
   },
   {
-    "user_id": "U003",
-    "name": "Sophie Dupont",
-    "city": "Paris",
-    "country": "FR",
-    "language": "fr",
-    "purchase_history": [
-      {"sku": "4088600333001", "name": "Fromage", "count": 6},
-      {"sku": "4088600333002", "name": "Vin Rouge", "count": 2},
-      {"sku": "4088600333003", "name": "Baguette", "count": 10}
-    ]
+    "id": 3,
+    "name": "Zöldi Zsuzsa",
+    "email": "aiishackathon+3@gmail.com",
+    "favorite_category": "Vegetables",
+    "least_purchased_category": "Sweets"
   },
   {
-    "user_id": "U004",
-    "name": "James Walker",
-    "city": "London",
-    "country": "GB",
-    "language": "en",
-    "purchase_history": [
-      {"sku": "4088600444001", "name": "Cheddar Cheese", "count": 4},
-      {"sku": "4088600444002", "name": "Milk 2L", "count": 7},
-      {"sku": "4088600444003", "name": "Chicken Breast", "count": 3}
-    ]
+    "id": 4,
+    "name": "Csoki Csaba",
+    "email": "aiishackathon+4@gmail.com",
+    "favorite_category": "Sweets",
+    "least_purchased_category": "Grilling non-food"
+  },
+  {
+    "id": 5,
+    "name": "Péksüti Piroska",
+    "email": "aiishackathon+5@gmail.com",
+    "favorite_category": "Bakery",
+    "least_purchased_category": "Pasta & grains"
   }
 ]
