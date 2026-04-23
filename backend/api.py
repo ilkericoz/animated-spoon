@@ -37,7 +37,7 @@ app.add_middleware(
 
 USERS_FILE = pathlib.Path(__file__).parent.parent / "data" / "users.json"
 FIXTURE_FILE = pathlib.Path(__file__).parent.parent / "data" / "fixture.json"
-TEMPLATE_FILE = pathlib.Path(__file__).parent.parent / "templates" / "email.html"
+TEMPLATE_FILE = pathlib.Path(__file__).parent.parent / "email2.html"
 SENT_EMAILS: list[dict] = []
 SWIPE_FILE = pathlib.Path(__file__).parent.parent / "data" / "swipe_preferences.json"
 SWIPE_BASE_URL = os.getenv("SWIPE_BASE_URL", "http://localhost:5173/swipe")
@@ -199,35 +199,39 @@ def get_swipes(user_id: str):
 
 def _render_email(payload: dict) -> str:
     template = TEMPLATE_FILE.read_text()
+    currency_label = _currency_label(payload)
 
     products_html = ""
     for p in payload["products"]:
-        urgency_label = ["", "Expiring soon", "Expiring in 2-3 days", "Last chance!"][p.get("urgency", 1)]
+        urgency_label = ["", "3-day highlight", "2-day discount", "1-day last chance"][p.get("urgency", 1)]
         urgency_color = ["", "#FFCC00", "#FF7800", "#D20002"][p.get("urgency", 1)]
         products_html += f"""
         <tr>
-          <td style="padding:12px 16px; border-bottom:1px solid #eee;">
-            <span style="background:{urgency_color};color:#00005F;font-size:10px;font-weight:700;
-                         padding:2px 6px;border-radius:3px;">{urgency_label}</span>
-            <strong style="display:block;font-size:15px;color:#00005F;margin-top:4px;">{p['name']}</strong>
-            <span style="color:#888;text-decoration:line-through;font-size:12px;">€{p['original_price']:.2f}</span>
-            <span style="color:#D20002;font-weight:700;font-size:16px;margin-left:6px;">€{p.get('discounted_price', 0):.2f}</span>
-            <span style="background:#FF7800;color:white;font-size:11px;font-weight:700;
-                         padding:1px 5px;border-radius:3px;margin-left:4px;">-{p.get('discount_pct',0)}%</span>
-            <p style="color:#555;font-size:12px;margin:4px 0 0;">{p.get('explanation','')}</p>
+          <td style="padding:12px 12px 14px;border-bottom:1px solid #eee3cc;">
+            <span style="display:inline-block;background:{urgency_color};color:#0f1830;font-size:10px;font-weight:700;padding:4px 8px;border-radius:999px;">{urgency_label}</span>
+            <strong style="display:block;font-size:17px;color:#0f1830;margin-top:10px;font-weight:800;">{p['name']}</strong>
+            <div style="margin-top:8px;">
+              <span style="color:#8a8a8a;text-decoration:line-through;font-size:12px;">{_format_money(p['original_price'], currency_label)}</span>
+              <span style="color:#D62828;font-weight:800;font-size:18px;margin-left:8px;">{_format_money(p.get('discounted_price', 0), currency_label)}</span>
+              <span style="display:inline-block;background:#0f1830;color:#ffd166;font-size:10px;font-weight:700;padding:3px 6px;border-radius:999px;margin-left:8px;">-{p.get('discount_pct',0)}%</span>
+            </div>
+            <p style="color:#565656;font-size:12px;line-height:1.6;margin:8px 0 0;">{p.get('explanation','')}</p>
           </td>
         </tr>"""
 
     bundles_html = ""
     for b in payload.get("bundles", []):
         bundles_html += f"""
-        <div style="background:#FFF3E0;border-left:4px solid #FF7800;padding:10px 14px;margin:8px 0;border-radius:4px;">
-          <strong style="color:#00005F;">{b['name']}</strong><br>
-          <span style="color:#888;font-size:12px;text-decoration:line-through;">€{b.get('original_total',0):.2f}</span>
-          <span style="color:#D20002;font-weight:700;font-size:15px;margin-left:6px;">€{b['bundle_price']:.2f}</span>
-          <span style="background:#D20002;color:white;font-size:11px;padding:1px 5px;border-radius:3px;margin-left:4px;">
+        <div style="background:#fff4dc;border:1px solid #f1d8a8;padding:14px 16px;margin:10px 0;">
+          <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#D62828;font-weight:700;">Smart bundle</div>
+          <strong style="display:block;color:#0f1830;font-size:16px;margin-top:6px;">{b['name']}</strong>
+          <div style="margin-top:8px;">
+            <span style="color:#8a8a8a;font-size:12px;text-decoration:line-through;">{_format_money(b.get('original_total',0), currency_label)}</span>
+            <span style="color:#D62828;font-weight:800;font-size:16px;margin-left:6px;">{_format_money(b['bundle_price'], currency_label)}</span>
+            <span style="display:inline-block;background:#D62828;color:#fff4dc;font-size:10px;padding:3px 6px;border-radius:999px;margin-left:6px;">
             -{b.get('bundle_discount_pct',0)}% BUNDLE
-          </span>
+            </span>
+          </div>
         </div>"""
 
     user_id = payload.get("user_id", "1")
@@ -245,6 +249,16 @@ def _render_email(payload: dict) -> str:
             .replace("{{send_time}}", payload.get("send_time", "Saturday 09:00"))
             .replace("{{swipe_url}}", swipe_link)
             )
+
+
+def _currency_label(payload: dict) -> str:
+    return "HUF" if payload.get("user_country") == "HU" else "EUR"
+
+
+def _format_money(amount: float | int, currency_label: str) -> str:
+    if currency_label == "HUF":
+        return f"HUF {int(round(amount)):,}"
+    return f"{currency_label} {float(amount):,.2f}"
 
 
 def _build_send_payload(user_id: str, use_ai: bool) -> dict:
