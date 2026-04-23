@@ -9,6 +9,8 @@ Endpoints:
   GET  /stats                         → aggregate waste/CO2 stats across all users
 """
 
+import json
+import os
 import pathlib
 import time
 from datetime import datetime, timezone
@@ -16,6 +18,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 from backend.email_payload import generate_email_payload
 from backend.ai_copy import enrich_payload_with_copy
@@ -36,6 +39,17 @@ USERS_FILE = pathlib.Path(__file__).parent.parent / "data" / "users.json"
 FIXTURE_FILE = pathlib.Path(__file__).parent.parent / "data" / "fixture.json"
 TEMPLATE_FILE = pathlib.Path(__file__).parent.parent / "templates" / "email.html"
 SENT_EMAILS: list[dict] = []
+SWIPE_FILE = pathlib.Path(__file__).parent.parent / "data" / "swipe_preferences.json"
+SWIPE_BASE_URL = os.getenv("SWIPE_BASE_URL", "http://localhost:5173/swipe")
+
+
+class SwipeRecord(BaseModel):
+    user_id: str
+    item_type: str  # "category" | "product" | "bundle"
+    item_id: str
+    item_name: str
+    liked: bool
+    timestamp: str = ""
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -151,6 +165,36 @@ def list_sent_emails():
     return SENT_EMAILS
 
 
+# ── Swipe endpoints ───────────────────────────────────────────────────────────
+
+@app.post("/swipe")
+def record_swipe(record: SwipeRecord):
+    """Append a single swipe event to data/swipe_preferences.json."""
+    if not record.timestamp:
+        record.timestamp = datetime.utcnow().isoformat()
+    existing = []
+    if SWIPE_FILE.exists():
+        try:
+            existing = json.loads(SWIPE_FILE.read_text())
+        except Exception:
+            existing = []
+    existing.append(record.model_dump())
+    SWIPE_FILE.write_text(json.dumps(existing, ensure_ascii=False, indent=2))
+    return {"status": "ok"}
+
+
+@app.get("/swipe/{user_id}")
+def get_swipes(user_id: str):
+    """Return all swipe records for a given user."""
+    if not SWIPE_FILE.exists():
+        return []
+    try:
+        records = json.loads(SWIPE_FILE.read_text())
+    except Exception:
+        return []
+    return [r for r in records if str(r.get("user_id")) == str(user_id)]
+
+
 # ── Email renderer ────────────────────────────────────────────────────────────
 
 def _render_email(payload: dict) -> str:
@@ -186,6 +230,9 @@ def _render_email(payload: dict) -> str:
           </span>
         </div>"""
 
+    user_id = payload.get("user_id", "1")
+    swipe_link = f"{SWIPE_BASE_URL}?user_id={user_id}"
+
     return (template
             .replace("{{user_name}}", payload.get("user_name", "Customer"))
             .replace("{{subject_line}}", payload.get("subject_line", "Your ALDI Rescue deals"))
@@ -196,6 +243,7 @@ def _render_email(payload: dict) -> str:
             .replace("{{waste_saved_kg}}", str(payload.get("waste_saved_kg", 0)))
             .replace("{{co2_saved_kg}}", str(payload.get("co2_saved_kg", 0)))
             .replace("{{send_time}}", payload.get("send_time", "Saturday 09:00"))
+            .replace("{{swipe_url}}", swipe_link)
             )
 
 
