@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { SwipeStack } from "../components/SwipeStack";
 import type { SwipeItem } from "../components/SwipeCard";
-
-const API_BASE = "http://localhost:8000";
+import { API_BASE } from "../lib/api";
 
 const CATEGORY_MAP: Record<string, { en: string; emoji: string }> = {
   "Édesség":            { en: "Sweets & Snacks",      emoji: "🍫" },
