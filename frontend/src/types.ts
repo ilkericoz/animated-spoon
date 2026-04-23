@@ -87,8 +87,18 @@ export type SentRecord = {
   user_email?: string
   message_id?: string
   sent_at?: string
+  subject?: string
   status?: "sent" | "failed"
   error?: string
+}
+
+export type SwipeRecord = {
+  user_id: string | number
+  item_type: "category" | "product" | "bundle" | string
+  item_id: string
+  item_name: string
+  liked: boolean
+  timestamp?: string
 }
 
 export type SendResult =

@@ -5,6 +5,7 @@ import { AppHeader } from "@/components/AppHeader"
 import { StatsGrid } from "@/components/StatsGrid"
 import { UserSidebar } from "@/components/UserSidebar"
 import { PreviewPanel } from "@/components/PreviewPanel"
+import { RecentSends } from "@/components/RecentSends"
 import type { SendStatus } from "@/components/StatusBadge"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -13,11 +14,12 @@ import {
   getEmailHtml,
   getSent,
   getStats,
+  getSwipes,
   getUsers,
   send,
   API_BASE,
 } from "@/lib/api"
-import type { Payload, SentRecord, Stats, User } from "@/types"
+import type { Payload, SentRecord, Stats, SwipeRecord, User } from "@/types"
 
 function App() {
   const [users, setUsers] = useState<User[] | null>(null)
@@ -42,6 +44,9 @@ function App() {
   const [sendingAll, setSendingAll] = useState(false)
   const [sendAllCompleted, setSendAllCompleted] = useState(0)
   const [sendAllFailed, setSendAllFailed] = useState(0)
+
+  const [swipes, setSwipes] = useState<SwipeRecord[] | null>(null)
+  const [swipesLoading, setSwipesLoading] = useState(false)
 
   // Preserve the latest payload's user id so switching customers doesn't race
   const activeGenerationRef = useRef<string | number | null>(null)
@@ -198,6 +203,31 @@ function App() {
     previousUseAi.current = useAi
   }, [useAi, selectedUserId, payload, doGenerate])
 
+  // Pull swipe preferences for the selected user whenever the selection changes.
+  useEffect(() => {
+    if (selectedUserId == null) {
+      setSwipes(null)
+      setSwipesLoading(false)
+      return
+    }
+    let cancelled = false
+    setSwipesLoading(true)
+    getSwipes(selectedUserId)
+      .then((res) => {
+        if (cancelled) return
+        setSwipes(res.available ? res.records : [])
+      })
+      .catch(() => {
+        if (!cancelled) setSwipes([])
+      })
+      .finally(() => {
+        if (!cancelled) setSwipesLoading(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [selectedUserId])
+
   // ── Layout ───────────────────────────────────────────────────────────────
   return (
     <TooltipProvider>
@@ -227,7 +257,13 @@ function App() {
             sentUnavailable={!sentAvailable}
             payload={payload}
             payloadLoading={previewLoading}
+            swipes={swipes}
+            swipesLoading={swipesLoading}
           />
+
+          {sentAvailable ? (
+            <RecentSends records={sentRecords} users={users} />
+          ) : null}
 
           <div className="grid min-h-[680px] flex-1 grid-cols-1 gap-4 lg:grid-cols-[340px_minmax(0,1fr)]">
             <UserSidebar
@@ -250,6 +286,8 @@ function App() {
               payload={payload}
               emailHtml={emailHtml}
               loading={previewLoading}
+              swipes={swipes}
+              swipesLoading={swipesLoading}
             />
           </div>
 

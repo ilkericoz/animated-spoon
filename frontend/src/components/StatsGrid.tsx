@@ -6,6 +6,7 @@ import {
   Wallet,
   Package,
   TrendingDown,
+  Heart,
 } from "lucide-react"
 
 import { StatCard } from "@/components/StatCard"
@@ -14,7 +15,7 @@ import {
   formatInt,
   formatKg,
 } from "@/lib/format"
-import type { Payload, Stats, Totals } from "@/types"
+import type { Payload, Stats, SwipeRecord, Totals } from "@/types"
 
 type Props = {
   stats: Stats | null
@@ -23,6 +24,8 @@ type Props = {
   sentUnavailable: boolean
   payload: Payload | null
   payloadLoading: boolean
+  swipes: SwipeRecord[] | null
+  swipesLoading: boolean
 }
 
 export function StatsGrid({
@@ -32,9 +35,14 @@ export function StatsGrid({
   sentUnavailable,
   payload,
   payloadLoading,
+  swipes,
+  swipesLoading,
 }: Props) {
   const totals: Totals | undefined = payload?.totals
   const currency = totals?.currency ?? "HUF"
+  const swipeLikes = swipes?.filter((r) => r.liked).length ?? 0
+  const swipeTotal = swipes?.length ?? 0
+  const swipePasses = swipeTotal - swipeLikes
 
   return (
     <div className="space-y-3">
@@ -75,7 +83,7 @@ export function StatsGrid({
       </div>
 
       {/* Row 2 — selected-user economics */}
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
         <StatCard
           label="Projected profit"
           icon={Wallet}
@@ -113,6 +121,20 @@ export function StatsGrid({
               : "for this customer"
           }
           loading={payloadLoading}
+        />
+        <StatCard
+          label="Swipes collected"
+          icon={Heart}
+          accent="red"
+          value={payload ? formatInt(swipeTotal) : "—"}
+          hint={
+            payload
+              ? swipeTotal > 0
+                ? `${swipeLikes} liked · ${swipePasses} passed`
+                : "no swipes yet"
+              : "pick a customer"
+          }
+          loading={swipesLoading && payload != null}
         />
       </div>
     </div>

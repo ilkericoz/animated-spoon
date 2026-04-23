@@ -8,6 +8,9 @@ import {
   CloudRain,
   Cloud,
   Snowflake,
+  Heart,
+  ThumbsUp,
+  ThumbsDown,
 } from "lucide-react"
 
 import {
@@ -22,13 +25,16 @@ import { EmailTab } from "@/components/EmailTab"
 import { JsonTab } from "@/components/JsonTab"
 import { PdfTab } from "@/components/PdfTab"
 import { DiscountBreakdown } from "@/components/DiscountBreakdown"
-import type { Payload, User } from "@/types"
+import { PreferencesTab } from "@/components/PreferencesTab"
+import type { Payload, SwipeRecord, User } from "@/types"
 
 type Props = {
   selectedUser: User | null
   payload: Payload | null
   emailHtml: string | null
   loading: boolean
+  swipes: SwipeRecord[] | null
+  swipesLoading: boolean
 }
 
 export function PreviewPanel({
@@ -36,6 +42,8 @@ export function PreviewPanel({
   payload,
   emailHtml,
   loading,
+  swipes,
+  swipesLoading,
 }: Props) {
   return (
     <section className="flex h-full min-h-0 flex-col gap-3 rounded-xl border border-border/70 bg-card p-3 shadow-xs">
@@ -50,6 +58,10 @@ export function PreviewPanel({
           <TabsTrigger value="breakdown">
             <Calculator className="size-4" />
             Breakdown
+          </TabsTrigger>
+          <TabsTrigger value="preferences">
+            <Heart className="size-4" />
+            Preferences
           </TabsTrigger>
           <TabsTrigger value="json">
             <Braces className="size-4" />
@@ -76,6 +88,16 @@ export function PreviewPanel({
           className="min-h-0 flex-1 data-[state=inactive]:hidden"
         >
           <DiscountBreakdown payload={payload} />
+        </TabsContent>
+        <TabsContent
+          value="preferences"
+          className="min-h-0 flex-1 data-[state=inactive]:hidden"
+        >
+          <PreferencesTab
+            records={swipes}
+            loading={swipesLoading}
+            hasSelection={!!selectedUser}
+          />
         </TabsContent>
         <TabsContent
           value="json"
@@ -140,6 +162,22 @@ function PreviewHeader({
           <div className="mt-0.5 truncate text-xs text-muted-foreground">
             {[user.email, user.city, user.country].filter(Boolean).join(" · ")}
           </div>
+          {(user.favorite_category || user.least_purchased_category) && (
+            <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+              {user.favorite_category ? (
+                <span className="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-900">
+                  <ThumbsUp className="size-3" />
+                  {user.favorite_category}
+                </span>
+              ) : null}
+              {user.least_purchased_category ? (
+                <span className="inline-flex items-center gap-1 rounded-full border border-border bg-muted px-2 py-0.5 text-[11px] font-medium text-muted-foreground">
+                  <ThumbsDown className="size-3" />
+                  {user.least_purchased_category}
+                </span>
+              ) : null}
+            </div>
+          )}
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import type {
   SendResult,
   SentRecord,
   Stats,
+  SwipeRecord,
   User,
 } from "@/types"
 import { inferCurrency, urgencyFromDays } from "@/lib/format"
@@ -122,6 +123,23 @@ export async function getSent(): Promise<
     if (r.status === 404 || r.status === 405) return { available: false }
     if (!r.ok) return { available: false }
     const records = (await r.json()) as SentRecord[]
+    return { available: true, records }
+  } catch {
+    return { available: false }
+  }
+}
+
+// ─── Swipe preferences ───────────────────────────────────────────────────
+export async function getSwipes(
+  userId: string | number,
+): Promise<
+  { available: true; records: SwipeRecord[] } | { available: false }
+> {
+  try {
+    const r = await fetch(`${API_BASE}/swipe/${userId}`)
+    if (r.status === 404 || r.status === 405) return { available: false }
+    if (!r.ok) return { available: false }
+    const records = (await r.json()) as SwipeRecord[]
     return { available: true, records }
   } catch {
     return { available: false }
