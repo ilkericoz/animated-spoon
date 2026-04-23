@@ -79,21 +79,28 @@ Every agent must read from or write to this shape. Agent A owns producing it.
 
 ---
 
-## Agent A — Economics engine
+## Agent A — Payload correctness
 
-**Files you own:** `backend/email_payload.py`, `backend/economics.py` (new). Do not edit anything else.
+Files you own: backend/email_payload.py only.
 
-**What to do:**
-1. Create `backend/economics.py` with one function: `pick_optimal_discount(product) -> (discount_pct, reasoning_string, projections_dict)`. It should try discounts of 15, 25, 40, and 50 percent. For each, project units rescued using stock, last_7_day_sold, and days_until_expiry. Compute net margin: `(discounted_price - cost_price) * projected_units_rescued`. Pick the discount with highest net margin. Never return a discount that sends price below cost_price.
-2. Update `email_payload.py` to call `pick_optimal_discount` instead of the static 20/50/50 ladder. Populate the new fields: `chosen_discount_pct`, `discounted_price_huf`, `units_at_risk`, `projected_units_rescued`, `projected_profit_huf`, `economic_reasoning`.
-3. Compute top-level `totals` object exactly as in the contract above.
-4. Keep the existing bundle logic, just update bundle pricing to use the new discounts.
-5. Purchase history does not exist for real API users. Use `favorite_category` (boost affinity 1.5x) and `least_purchased_category` (set affinity to 0, never recommend). Do not fabricate history.
+What to do:
+1. Enforce the brief's fixed discount tiers exactly:
+   - 3 days until expiry: product included, 0% discount, flagged as "highlight"
+   - 2 days until expiry: 20% discount
+   - 1 day until expiry: 50% discount
+   - 0 days or expired: exclude
+2. Cap top products at exactly 10 per email.
+3. Compute projected totals for the dashboard: projected_profit_huf 
+   (sum of (discounted_price - cost_price) * expected_rescued_units), 
+   projected_waste_saved_kg, projected_co2_saved_kg. These are reporting 
+   metrics, not decisions.
+4. Keep weather and category affinity only for ranking within the top 10, 
+   not for changing discount amounts.
+5. Remove purchase_history_hint if it exists (Agent D is fixing that 
+   separately).
 
-**Do not:** change the `/generate` endpoint signature, rename any existing payload fields that other agents depend on, touch `api.py`.
-
-**Done when:** `POST /generate/2?use_ai=false` returns a payload matching the contract, and the numbers make sense when you eyeball them.
-
+Done when: /generate/2 returns exactly the brief's tier structure with 
+max 10 products and correct totals.
 ---
 
 ## Agent B — Email sending
