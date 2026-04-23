@@ -5,17 +5,17 @@ import type { SwipeItem } from "../components/SwipeCard";
 const API_BASE = "http://localhost:8000";
 
 const CATEGORY_MAP: Record<string, { en: string; emoji: string }> = {
-  "Édesség":          { en: "Sweets & Snacks",      emoji: "🍫" },
-  "Egyéb non-food":   { en: "Other Non-Food",        emoji: "🔧" },
-  "Grillezős food":   { en: "Grill Food",            emoji: "🔥" },
-  "Grillezős non-food":{ en: "Grill Accessories",    emoji: "🪵" },
-  "Pékáru":           { en: "Bakery",                emoji: "🥐" },
-  "Szeszes ital":     { en: "Alcoholic Drinks",      emoji: "🍺" },
-  "Tejtermék":        { en: "Dairy",                 emoji: "🥛" },
-  "Tésztaféle":       { en: "Pasta & Grains",        emoji: "🍝" },
-  "Üdítő ital":       { en: "Soft Drinks",           emoji: "🥤" },
-  "Üveges ital":      { en: "Bottled Drinks",        emoji: "🍶" },
-  "Zöldség":          { en: "Vegetables & Produce",  emoji: "🥦" },
+  "Édesség":            { en: "Sweets & Snacks",      emoji: "🍫" },
+  "Egyéb non-food":     { en: "Other Non-Food",        emoji: "🔧" },
+  "Grillezős food":     { en: "Grill Food",            emoji: "🔥" },
+  "Grillezős non-food": { en: "Grill Accessories",     emoji: "🪵" },
+  "Pékáru":             { en: "Bakery",                emoji: "🥐" },
+  "Szeszes ital":       { en: "Alcoholic Drinks",      emoji: "🍺" },
+  "Tejtermék":          { en: "Dairy",                 emoji: "🥛" },
+  "Tésztaféle":         { en: "Pasta & Grains",        emoji: "🍝" },
+  "Üdítő ital":         { en: "Soft Drinks",           emoji: "🥤" },
+  "Üveges ital":        { en: "Bottled Drinks",        emoji: "🍶" },
+  "Zöldség":            { en: "Vegetables & Produce",  emoji: "🥦" },
 };
 
 function translateCategory(hu: string): string {
@@ -36,31 +36,32 @@ export default function SwipePage() {
   useEffect(() => {
     async function load() {
       try {
-        // 1. Get user name
-        const usersRes = await fetch(`${API_BASE}/users`);
-        const usersData = await usersRes.json();
-        const users: any[] = usersData.data ?? usersData;
-        const user = Array.isArray(users)
-          ? users.find((u: any) => String(u.id ?? u.user_id) === String(userId))
-          : null;
-        if (user) setUserName((user.name ?? "").split(" ")[0]);
-
-        // 2. Get payload — products + bundles via POST /generate/{user_id}
+        // 1. Get payload — products + bundles via POST /generate/{user_id}
+        // (includes favorite_category, least_purchased_category, user_name)
         const payloadRes = await fetch(`${API_BASE}/generate/${userId}?use_ai=false`, {
           method: "POST",
         });
         const payload = await payloadRes.json();
 
-        // 3. Category cards — one per unique category from the API's category list
-        const allCategories = Object.keys(CATEGORY_MAP);
-        const categoryItems: SwipeItem[] = allCategories.map((hu) => ({
-          type: "category",
-          id: `cat-${hu}`,
-          name: CATEGORY_MAP[hu].en,
-          emoji: CATEGORY_MAP[hu].emoji,
-        }));
+        const firstName = (payload.user_name ?? "").split(" ")[0];
+        if (firstName) setUserName(firstName);
 
-        // 4. Product cards — from ranked payload
+        const favoriteHu: string = payload.favorite_category ?? "";
+
+        // 2. Bundle cards — personalised by generate endpoint, show first
+        const bundleItems: SwipeItem[] = (payload.bundles ?? []).map(
+          (b: any, i: number) => ({
+            type: "bundle",
+            id: `bundle-${i}`,
+            name: b.name ?? "Bundle Deal",
+            bundle_price: b.bundle_price ?? 0,
+            original_total: b.original_total ?? 0,
+            bundle_discount_pct: b.bundle_discount_pct ?? 0,
+            skus: b.skus ?? [],
+          })
+        );
+
+        // 3. Product cards — already ranked & personalised, most urgent first
         const productItems: SwipeItem[] = (payload.products ?? [])
           .slice(0, 8)
           .map((p: any) => ({
@@ -74,20 +75,32 @@ export default function SwipePage() {
             days_until_expiry: p.days_until_expiry ?? p.expiry_days ?? 3,
           }));
 
-        // 5. Bundle cards — from payload bundles
-        const bundleItems: SwipeItem[] = (payload.bundles ?? []).map(
-          (b: any, i: number) => ({
-            type: "bundle",
-            id: `bundle-${i}`,
-            name: b.name ?? "Bundle Deal",
-            bundle_price: b.bundle_price ?? 0,
-            original_total: b.original_total ?? 0,
-            bundle_discount_pct: b.bundle_discount_pct ?? 0,
-            skus: b.skus ?? [],
-          })
+        // 4. Category cards — only categories that appear in THIS user's products,
+        //    with their favourite surfaced first and marked.
+        const productCategories: string[] = Array.from(
+          new Set((payload.products ?? []).map((p: any) => p.category as string).filter(Boolean))
         );
+        // Also include their favourite even if it has no expiring items right now
+        if (favoriteHu && !productCategories.includes(favoriteHu)) {
+          productCategories.unshift(favoriteHu);
+        }
+        // Favourite first, rest in original order
+        const sorted = [
+          ...productCategories.filter((c) => c === favoriteHu),
+          ...productCategories.filter((c) => c !== favoriteHu),
+        ];
+        const categoryItems: SwipeItem[] = sorted
+          .filter((hu) => CATEGORY_MAP[hu])
+          .map((hu) => ({
+            type: "category",
+            id: `cat-${hu}`,
+            name: CATEGORY_MAP[hu].en,
+            emoji: CATEGORY_MAP[hu].emoji,
+            isFavorite: hu === favoriteHu,
+          }));
 
-        const allItems = [...categoryItems, ...productItems, ...bundleItems];
+        // Order: bundles (curated) → products (urgent) → categories (feedback)
+        const allItems = [...bundleItems, ...productItems, ...categoryItems];
         setItems(allItems);
         setTotal(allItems.length);
       } catch (err) {

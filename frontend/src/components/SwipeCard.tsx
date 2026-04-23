@@ -3,7 +3,7 @@ import type { PanInfo } from "framer-motion";
 import { useCallback, useRef } from "react";
 
 export type SwipeItem =
-  | { type: "category"; id: string; name: string; emoji: string }
+  | { type: "category"; id: string; name: string; emoji: string; isFavorite?: boolean }
   | {
       type: "product";
       id: string;
@@ -145,7 +145,9 @@ function CardContent({
       <div className="bg-[#00A0E9]/10 px-5 py-2 text-center">
         <p className="text-[#00005F] text-xs font-semibold">
           {item.type === "category"
-            ? "Are you interested in this category?"
+            ? item.isFavorite
+              ? "This is your favourite — still interested?"
+              : "Interested in deals from this category?"
             : item.type === "product"
             ? "Would you buy this rescue deal?"
             : "Would this bundle interest you?"}
@@ -193,6 +195,11 @@ function CategoryBody({
 }) {
   return (
     <div className="text-center">
+      {item.isFavorite && (
+        <div className="inline-block mb-3 bg-[#FFCC00] text-[#00005F] text-xs font-bold px-3 py-1 rounded-full">
+          ⭐ Your Favourite Category
+        </div>
+      )}
       <div className="text-6xl mb-3">{item.emoji}</div>
       <h2 className="text-xl font-bold text-[#00005F] mb-1">{item.name}</h2>
     </div>
