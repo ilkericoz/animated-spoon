@@ -9,8 +9,9 @@ Endpoints:
   GET  /stats                         → aggregate waste/CO2 stats across all users
 """
 
-import json
 import pathlib
+import time
+from datetime import datetime, timezone
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, Response
 from fastapi.staticfiles import StaticFiles
@@ -20,6 +21,7 @@ from backend.email_payload import generate_email_payload
 from backend.ai_copy import enrich_payload_with_copy
 from backend.pdf_generator import generate_coupon_pdf
 from backend.nagya_client import get_all_users
+from backend.email_sender import send_rescue_email
 
 app = FastAPI(title="ALDI Rescue", version="1.0.0")
 
@@ -31,7 +33,9 @@ app.add_middleware(
 )
 
 USERS_FILE = pathlib.Path(__file__).parent.parent / "data" / "users.json"
+FIXTURE_FILE = pathlib.Path(__file__).parent.parent / "data" / "fixture.json"
 TEMPLATE_FILE = pathlib.Path(__file__).parent.parent / "templates" / "email.html"
+SENT_EMAILS: list[dict] = []
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -94,6 +98,59 @@ def aggregate_stats():
     }
 
 
+@app.post("/send/{user_id}")
+def send_email(user_id: str, use_ai: bool = False, email_override: str | None = None):
+    """
+    Sends the generated rescue email with the generated PDF attached.
+    Falls back to the local fixture payload if live generation fails.
+    """
+    payload = _build_send_payload(user_id, use_ai=use_ai)
+    html = _render_email(payload)
+    pdf_bytes = generate_coupon_pdf(payload)
+
+    recipient = email_override or _resolve_user_email(user_id)
+    if not recipient:
+        raise HTTPException(status_code=404, detail=f"No email found for user {user_id}")
+
+    # Small buffer in case this endpoint is used in a simple loop.
+    time.sleep(1)
+
+    result = send_rescue_email(
+        user_email=recipient,
+        subject=payload.get("subject_line") or "ALDI Rescue",
+        html_body=html,
+        pdf_bytes=pdf_bytes,
+        pdf_filename=f"aldi_rescue_{user_id}.pdf",
+    )
+    sent_at = datetime.now(timezone.utc).isoformat()
+
+    entry = {
+        "status": result["status"],
+        "message_id": result["message_id"],
+        "sent_at": sent_at,
+        "user_id": user_id,
+        "user_email": recipient,
+        "subject": payload.get("subject_line") or "ALDI Rescue",
+        "error": result.get("error"),
+    }
+    SENT_EMAILS.append(entry)
+
+    if result["status"] != "sent":
+        raise HTTPException(status_code=502, detail=entry)
+
+    return {
+        "status": result["status"],
+        "message_id": result["message_id"],
+        "sent_at": sent_at,
+        "user_email": recipient,
+    }
+
+
+@app.get("/sent")
+def list_sent_emails():
+    return SENT_EMAILS
+
+
 # ── Email renderer ────────────────────────────────────────────────────────────
 
 def _render_email(payload: dict) -> str:
@@ -140,3 +197,68 @@ def _render_email(payload: dict) -> str:
             .replace("{{co2_saved_kg}}", str(payload.get("co2_saved_kg", 0)))
             .replace("{{send_time}}", payload.get("send_time", "Saturday 09:00"))
             )
+
+
+def _build_send_payload(user_id: str, use_ai: bool) -> dict:
+    try:
+        payload = generate_email_payload(user_id)
+        if use_ai:
+            payload = enrich_payload_with_copy(payload)
+        else:
+            _ensure_basic_copy(payload)
+        for product in payload.get("products", []):
+            product.pop("_score", None)
+        return payload
+    except Exception:
+        payload = _load_fixture_payload()
+        payload["user_id"] = user_id
+        if use_ai:
+            try:
+                payload = enrich_payload_with_copy(payload)
+            except Exception:
+                pass
+        else:
+            _ensure_basic_copy(payload)
+        return payload
+
+
+def _load_fixture_payload() -> dict:
+    import json
+
+    return json.loads(FIXTURE_FILE.read_text())
+
+
+def _resolve_user_email(user_id: str) -> str | None:
+    users = get_all_users()
+    if isinstance(users, dict):
+        users = users.get("data", [])
+
+    for user in users:
+        current_id = str(user.get("user_id") or user.get("id", ""))
+        if current_id == str(user_id):
+            return user.get("email")
+    return None
+
+
+def _ensure_basic_copy(payload: dict) -> None:
+    first_name = str(payload.get("user_name", "Customer")).split()[0]
+    weather_description = payload.get("weather", {}).get("description", "Fresh picks for the weekend")
+
+    if not payload.get("subject_line"):
+        payload["subject_line"] = f"{first_name}, your rescue deals are ready"
+    if not payload.get("intro_line"):
+        payload["intro_line"] = f"{weather_description}. We picked a few timely deals before they expire."
+
+    for product in payload.get("products", []):
+        if not product.get("explanation"):
+            product["explanation"] = _product_explanation(product)
+
+
+def _product_explanation(product: dict) -> str:
+    expiry_days = product.get("expiry_days", 99)
+    discount_pct = product.get("discount_pct", 0)
+    if expiry_days <= 1:
+        return f"Last-chance rescue pick with {discount_pct}% off."
+    if expiry_days <= 3:
+        return f"Expiring soon and discounted by {discount_pct}%."
+    return "A timely weekend rescue offer."
