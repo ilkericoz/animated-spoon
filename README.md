@@ -4,20 +4,30 @@ Personalised food-rescue emails for ALDI customers. Combines near-expiry product
 
 ## Quick start
 
+Two processes — the FastAPI backend and the Vite dev server for the dashboard.
+
 ```bash
-# 1. Install deps
+# 1. Backend: Python deps + env + run API
 pip install -r requirements.txt
-
-# 2. Set env vars
-cp .env.example .env
-# edit .env and add ANTHROPIC_API_KEY
-
-# 3. Run the API
+cp .env.example .env           # add ANTHROPIC_API_KEY
 uvicorn backend.api:app --reload
+# → http://localhost:8000
 
-# 4. Open the dashboard
-open frontend/index.html
+# 2. Dashboard (in a second terminal): React + shadcn/ui
+cd frontend
+npm install
+npm run dev
+# → http://localhost:5173
 ```
+
+The dashboard points at `http://localhost:8000` by default. Override with
+`frontend/.env.local`:
+
+```env
+VITE_API_BASE=http://localhost:8000
+```
+
+For a production build of the dashboard: `npm run build` → `frontend/dist/`.
 
 ## Who owns what
 
@@ -26,7 +36,7 @@ open frontend/index.html
 | A | `backend/nagya_client.py`, `backend/email_payload.py` | Data, ranking, bundle logic |
 | B | `backend/weather.py`, `backend/ai_copy.py` | Weather + LLM copy generation |
 | C | `backend/pdf_generator.py`, `templates/email.html` | Email HTML + PDF coupon sheet |
-| D | `frontend/index.html`, `backend/api.py` | Dashboard + integration glue |
+| D | `frontend/` (React + shadcn), `backend/api.py` | Dashboard + integration glue |
 
 ## Data contract — `generate_email_payload(user_id)` returns:
 

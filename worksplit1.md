@@ -132,8 +132,6 @@ max 10 products and correct totals.
 4. In the preview pane, under the existing Email Preview tab, add a small box showing the product list with chosen discount and economic_reasoning for each. Plain text, no fancy styling.
 5. All API calls go to `http://localhost:8000`.
 
-**Do not:** touch any backend file, redesign the UI from scratch, add charting libraries, add authentication. The existing dashboard works — extend it, do not rewrite it.
-
 **Done when:** you can click through all 5 users, hit Send on each, and see the sent status update, with profit numbers visible in the stat cards.
 
 ---

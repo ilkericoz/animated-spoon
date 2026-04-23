@@ -5,3 +5,13 @@ __pycache__/
 *.pdf
 venv/
 .venv/
+
+# Frontend (Vite + React)
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# Skills CLI artefacts (local tooling state)
+.agents/
+skills-lock.json

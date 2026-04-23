@@ -1,0 +1,177 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ──────────────────────────────────────────────────────────────────────────
+   ALDI Rescue theme
+   Navy #00005F primary, warm neutral surfaces. Brand accents (blue/orange/
+   yellow/red) reserved for status + CTA, not for decoration.
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --radius: 0.75rem;
+
+  /* Base surface */
+  --background: oklch(0.99 0.003 250);
+  --foreground: oklch(0.18 0.04 265);
+
+  /* Cards / popovers */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 265);
+
+  /* Primary = ALDI navy #00005F */
+  --primary: oklch(0.23 0.16 268);
+  --primary-foreground: oklch(0.98 0.005 250);
+
+  /* Secondary = soft slate */
+  --secondary: oklch(0.96 0.008 255);
+  --secondary-foreground: oklch(0.23 0.16 268);
+
+  /* Muted / subtle surfaces */
+  --muted: oklch(0.965 0.005 255);
+  --muted-foreground: oklch(0.5 0.02 260);
+
+  /* Generic accent (used by shadcn for hover states) */
+  --accent: oklch(0.95 0.012 260);
+  --accent-foreground: oklch(0.23 0.16 268);
+
+  /* Destructive = ALDI red #D20002 */
+  --destructive: oklch(0.54 0.24 27);
+  --destructive-foreground: oklch(0.99 0.003 250);
+
+  /* Borders / rings */
+  --border: oklch(0.92 0.007 260);
+  --input: oklch(0.92 0.007 260);
+  --ring: oklch(0.5 0.18 268);
+
+  /* ALDI brand accents (used for semantic meaning, not backgrounds) */
+  --aldi-navy:   oklch(0.23 0.16 268); /* #00005F */
+  --aldi-blue:   oklch(0.64 0.18 238); /* #00A0E9 */
+  --aldi-orange: oklch(0.71 0.19  46); /* #FF7800 */
+  --aldi-yellow: oklch(0.88 0.17  95); /* #FFCC00 */
+  --aldi-red:    oklch(0.54 0.24  27); /* #D20002 */
+
+  /* Charts (unused but shadcn expects them) */
+  --chart-1: var(--aldi-navy);
+  --chart-2: var(--aldi-blue);
+  --chart-3: var(--aldi-orange);
+  --chart-4: var(--aldi-yellow);
+  --chart-5: var(--aldi-red);
+
+  /* Sidebar tokens (shadcn) */
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.18 0.04 265);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: oklch(0.96 0.008 255);
+  --sidebar-accent-foreground: var(--primary);
+  --sidebar-border: oklch(0.92 0.007 260);
+  --sidebar-ring: var(--ring);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-aldi-navy: var(--aldi-navy);
+  --color-aldi-blue: var(--aldi-blue);
+  --color-aldi-orange: var(--aldi-orange);
+  --color-aldi-yellow: var(--aldi-yellow);
+  --color-aldi-red: var(--aldi-red);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: color-mix(in oklch, var(--aldi-yellow) 55%, transparent);
+    color: var(--aldi-navy);
+  }
+
+  /* Subtle diagonal grid behind the app — a whisper of texture, not wallpaper */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      radial-gradient(
+        1200px 600px at 10% -10%,
+        color-mix(in oklch, var(--aldi-navy) 6%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 500px at 100% 0%,
+        color-mix(in oklch, var(--aldi-blue) 7%, transparent),
+        transparent 55%
+      );
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Monospace number tabular alignment for KPIs */
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+}
