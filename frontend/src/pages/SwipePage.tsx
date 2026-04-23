@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SwipeStack } from "../components/SwipeStack";
-import { SwipeItem } from "../components/SwipeCard";
+import type { SwipeItem } from "../components/SwipeCard";
 
 const API_BASE = "http://localhost:8000";
 

@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
-import { SwipeCard, SwipeItem } from "./SwipeCard";
+import { SwipeCard } from "./SwipeCard";
+import type { SwipeItem } from "./SwipeCard";
 
 interface SwipeStackProps {
   items: SwipeItem[];

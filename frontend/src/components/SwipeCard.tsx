@@ -1,4 +1,5 @@
-import { motion, useMotionValue, useTransform, animate, PanInfo } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import type { PanInfo } from "framer-motion";
 import { useCallback, useRef } from "react";
 
 export type SwipeItem =
