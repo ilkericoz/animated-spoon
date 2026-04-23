@@ -1,0 +1,63 @@
+{
+  "user_id": "U001",
+  "user_name": "Anna Schmidt",
+  "user_city": "Munich",
+  "user_country": "DE",
+  "user_language": "de",
+  "weather": {
+    "forecast": "sunny",
+    "temp_max": 28,
+    "description": "Sunny and 28°C this weekend"
+  },
+  "products": [
+    {
+      "sku": "4088600111001",
+      "name": "Grillwürstchen",
+      "category": "meat",
+      "expiry_days": 2,
+      "urgency": 3,
+      "original_price": 3.99,
+      "discount_pct": 40,
+      "discounted_price": 2.39,
+      "explanation": "28°C on Saturday and you've bought sausages 3 times this month.",
+      "bundle_sku": "4088600111004"
+    },
+    {
+      "sku": "4088600111002",
+      "name": "Kartoffelsalat",
+      "category": "deli",
+      "expiry_days": 2,
+      "urgency": 3,
+      "original_price": 2.49,
+      "discount_pct": 35,
+      "discounted_price": 1.62,
+      "explanation": "A classic grill side — and it expires in 2 days.",
+      "bundle_sku": null
+    },
+    {
+      "sku": "4088600111005",
+      "name": "Paprika-Dip",
+      "category": "condiments",
+      "expiry_days": 3,
+      "urgency": 2,
+      "original_price": 1.29,
+      "discount_pct": 25,
+      "discounted_price": 0.97,
+      "explanation": "Pairs perfectly with sausages — expiring soon.",
+      "bundle_sku": null
+    }
+  ],
+  "bundles": [
+    {
+      "name": "Weekend Grill Bundle",
+      "skus": ["4088600111001", "4088600111002"],
+      "bundle_discount_pct": 50,
+      "bundle_price": 2.19
+    }
+  ],
+  "subject_line": "Anna, dein Grill-Wochenende wartet – bis zu 40% Rabatt!",
+  "intro_line": "Das Wetter wird super dieses Wochenende. Wir haben Deals, die perfekt zu deinem Geschmack passen – bevor sie weg sind.",
+  "waste_saved_kg": 1.2,
+  "co2_saved_kg": 3.6,
+  "send_time": "Saturday 09:00"
+}

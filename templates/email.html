@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{subject_line}}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f0f0f0; font-family: 'Inter', 'Work Sans', Arial, sans-serif; }
+    .wrapper { max-width: 600px; margin: 24px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,95,0.12); }
+
+    /* Header */
+    .header { background: #00005F; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { color: #fff; font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+    .header-logo span { color: #00A0E9; }
+    .squares { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; width: 36px; height: 36px; }
+    .squares div { border-radius: 2px; }
+
+    /* Weather banner */
+    .weather-banner { background: linear-gradient(135deg, #00A0E9, #00005F); color: white; padding: 12px 32px; font-size: 13px; display: flex; align-items: center; gap: 8px; }
+    .weather-banner .icon { font-size: 20px; }
+
+    /* Hero */
+    .hero { padding: 28px 32px 16px; background: #fff; }
+    .hero h1 { color: #00005F; font-size: 22px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
+    .hero p { color: #555; font-size: 14px; line-height: 1.6; }
+
+    /* Eco badge */
+    .eco-badge { margin: 0 32px 20px; background: #E8F5E9; border-left: 4px solid #4CAF50; border-radius: 4px; padding: 10px 14px; font-size: 12px; color: #2E7D32; }
+    .eco-badge strong { font-size: 14px; }
+
+    /* Products */
+    .section-title { padding: 8px 32px; background: #00005F; color: #FFCC00; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .products-table { width: 100%; border-collapse: collapse; }
+
+    /* Bundles */
+    .bundles-wrap { padding: 16px 32px 8px; }
+    .bundles-title { color: #FF7800; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+
+    /* CTA */
+    .cta-wrap { padding: 20px 32px; text-align: center; }
+    .cta-btn { display: inline-block; background: #FF7800; color: #fff; font-weight: 700; font-size: 15px; padding: 14px 36px; border-radius: 6px; text-decoration: none; letter-spacing: 0.3px; }
+
+    /* Footer */
+    .footer { background: #00005F; color: rgba(255,255,255,0.7); font-size: 11px; padding: 16px 32px; text-align: center; line-height: 1.7; }
+    .footer a { color: #00A0E9; text-decoration: none; }
+
+    /* Send time chip */
+    .send-chip { display: inline-block; background: #FFCC00; color: #00005F; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-logo">ALDI <span>Rescue</span></div>
+    <div class="squares">
+      <div style="background:#00A0E9"></div>
+      <div style="background:#FF7800"></div>
+      <div style="background:#FFCC00"></div>
+      <div style="background:#D20002"></div>
+    </div>
+  </div>
+
+  <!-- Weather -->
+  <div class="weather-banner">
+    <span class="icon">🌤</span>
+    <span>{{weather_description}}</span>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>{{subject_line}}</h1>
+    <p>{{intro_line}}</p>
+    <span class="send-chip">📅 Optimal send: {{send_time}}</span>
+  </div>
+
+  <!-- Eco impact -->
+  <div class="eco-badge">
+    <strong>🌿 This email saves ~{{waste_saved_kg}} kg of food · ~{{co2_saved_kg}} kg CO₂ from waste</strong><br>
+    Every rescue deal keeps good food out of landfill.
+  </div>
+
+  <!-- Products -->
+  <div class="section-title">Your Rescue Deals</div>
+  <table class="products-table">
+    <tbody>
+      {{products_html}}
+    </tbody>
+  </table>
+
+  <!-- Bundles -->
+  {{bundles_html}}
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <a href="#" class="cta-btn">Download Coupon Sheet →</a>
+    <p style="font-size:11px;color:#888;margin-top:10px;">Scan at any ALDI checkout. Valid this weekend only.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    ALDI Rescue · Personalised food waste reduction<br>
+    <a href="#">Unsubscribe</a> · <a href="#">Privacy Policy</a> · <a href="#">ALDI.com</a><br><br>
+    © 2026 ALDI Group. All rights reserved.
+  </div>
+
+</div>
+</body>
+</html>
